@@ -1,0 +1,23 @@
+{
+    "name": "acb-bootstrap-snippets",
+    "title": "ACB Bootstrap Snippets",
+    "description": "A collection of Bootstrap snippets for Brackets.",
+    "homepage": "https://github.com/acbarbosa1964/acb-bootstrap-snippets",
+    "version": "0.0.7",
+    "author": "Antonio Carlos Barbosa <acbarbosa@gmail.com> (http://www.goodlearn.org)",
+    "license": "MIT",
+    "categories": "editing",
+    "keywords": [
+        "brackets",
+        "bootstrap",
+        "snippets"
+    ],
+    "files": [
+        "main.js",
+        "snippet.js",
+        "README.md"
+    ],
+    "engines": {
+        "brackets": ">=0.31.3"
+    }
+}
