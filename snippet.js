@@ -1868,9 +1868,9 @@ define(function (require, exports, module) {
         '                </li>\n' +
         '                <li><a href="#team">TEAM</a>\n' +
         '                </li>\n' +
-        '                <li><a href="#grid">CONTACT</a>\n' +
+        '                <li><a href="#contact">CONTACT</a>\n' +
         '                </li>\n' +
-        '                <li><a href="#contact">SIGN UP</a>\n' +
+        '                <li><a href="#signup">SIGN UP</a>\n' +
         '                </li>\n' +
         '            </ul>\n' +
         '        </div>\n' +
