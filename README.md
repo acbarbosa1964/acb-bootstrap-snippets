@@ -94,9 +94,7 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
     
     // Sample Images 
     //
-    // https://pixabay.com/static/uploads/photo/2015/06/15/06/17/flowers-809927_640.jpg
-    // https://pixabay.com/static/uploads/photo/2014/02/10/16/07/tulips-263513_640.jpg
-    // https://pixabay.com/static/uploads/photo/2014/04/10/10/00/tulip-320774_640.jpg
+    // http://www.publicdomainpictures.net/
 
 ### CDN
 
@@ -564,10 +562,18 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
     
 ### Animated Portfolio Sample    
 
-    snippets.bs3portfoliohelp
-    snippets.bs3portfoliocss
-    snippets.bs3portfolio
-    snippets.bs3portfoliojs
-    snippets.bs3portfoliolibs
+	bs3portfoliocss
+	bs3portfoliolibs
+	bs3portfoliojs
+	bs3portfoliomenu
+	bs3portfoliocarouseltext
+	bs3portfoliosocialbuttons
+	bs3portfolioservices
+	bs3portfoliopricetable
+	bs3portfoliowork
+	bs3portfolioteam
+	bs3portfoliocontact
+	bs3portfoliosignupform
+	bs3portfoliocopyright
 
 To get supplementary files for Animated Portfolio Sample check [Bootstrap Portfolio Project](https://github.com/acbarbosa1964/light-wave-bootstrap-portfolio-sample)
