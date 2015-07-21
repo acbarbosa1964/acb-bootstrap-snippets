@@ -204,13 +204,13 @@ define(function (require, exports, module) {
         '        </ol>\n' +
         '        <div class="carousel-inner">\n' +
         '            <div class="item active">\n' +
-        '                <img src="[INSERT IMAGE HERE]" alt="First slide" />\n' +
+        '                <img src="[INSERT IMAGE HERE]" alt="First slide"/>\n' +
         '            </div>\n' +
         '            <div class="item">\n' +
-        '                <img src="[INSERT IMAGE HERE]" alt="Second slide" />\n' +
+        '                <img src="[INSERT IMAGE HERE]" alt="Second slide"/>\n' +
         '            </div>\n' +
         '            <div class="item">\n' +
-        '                <img src="[INSERT IMAGE HERE]" alt="Third slide" />\n' +
+        '                <img src="[INSERT IMAGE HERE]" alt="Third slide"/>\n' +
         '            </div>\n' +
         '        </div>\n' +
         '        <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>\n' +
@@ -1757,19 +1757,17 @@ define(function (require, exports, module) {
     // Site Blocks
     //
 
-    snippets.bs3portfoliocss = '// bs3portfoliocss\n' +
-        '<!-- External Styles -->\n' +
-        '<link href="assets/css/ionicons.css" rel="stylesheet" />\n' +
-        '<link href="assets/css/font-awesome.css" rel="stylesheet" />\n' +
-        '<link href="assets/js/source/jquery.fancybox.css" rel="stylesheet" />\n' +
-        '<script src="assets/js/animate.min.css"></script>\n' +
-        '<link href="assets/css/animations.min.css" rel="stylesheet" />\n' +
-        '<link href="assets/css/style-blue.css" rel="stylesheet" />\n' +
-        '<link href="assets/js/vegas/jquery.vegas.min.css" rel="stylesheet" />\n' +
+    snippets.bs3portfoliocss = '<!-- External Styles -->\n' +
+        '<link href="assets/css/ionicons.css" rel="stylesheet"/>\n' +
+        '<link href="assets/css/font-awesome.css" rel="stylesheet"/>\n' +
+        '<link href="assets/js/source/jquery.fancybox.css" rel="stylesheet"/>\n' +
+        '<link href="assets/js/animate.min.css" rel="stylesheet"/>\n' +
+        '<link href="assets/css/animations.min.css" rel="stylesheet"/>\n' +
+        '<link href="assets/css/style-blue.css" rel="stylesheet"/>\n' +
+        '<link href="assets/js/vegas/jquery.vegas.min.css" rel="stylesheet"/>\n' +
         '<!-- End External Styles -->\n';
 
-    snippets.bs3portfoliolibs = '// bs3portfoliolibs\n' +
-        '<!-- External Libs -->\n' +
+    snippets.bs3portfoliolibs = '<!-- External Libs -->\n' +
         '<script src="assets/js/vegas/jquery.vegas.min.js"></script>\n' +
         '<script src="assets/js/jquery.easing.min.jsj"></script>\n' +
         '<script src="assets/js/source/jquery.fancybox.js"></script>\n' +
@@ -1779,8 +1777,7 @@ define(function (require, exports, module) {
         '<script src="assets/js/animations.min.js"></script>\n' +
         '<!-- End External Libs -->\n';
 
-    snippets.bs3portfoliojs = '// bs3portfoliojs\n' +
-        '// jQuery Functions inside tag <script>\n' +
+    snippets.bs3portfoliojs = '// jQuery Functions inside tag <script>\n' +
         '$(document).ready(function () {\n' +
         '    // IMAGE BACKGROUND SLIDE SHOW\n' +
         '    $.vegas(\'slideshow\', {\n' +
@@ -1844,8 +1841,7 @@ define(function (require, exports, module) {
         'new WOW().init();\n' +
         '// jQuery Function </script>\n';
 
-    snippets.bs3portfoliomenu = '//bs3portfoliomenu\n' +
-        '<!-- Replace or adapt body tag as follow     \n' +
+    snippets.bs3portfoliomenu = '<!-- Replace or adapt body tag as follow     \n' +
         '    <body data-spy="scroll" data-target="#menu-section">\n' +
         '-->\n' +
         '\n' +
@@ -1883,8 +1879,7 @@ define(function (require, exports, module) {
         '<!--MENU SECTION END-->\n';
 
 
-    snippets.bs3portfoliocarouseltext = '// bs3portfoliocarouseltext\n' +
-        '<!-- Text Corousel -->\n' +
+    snippets.bs3portfoliocarouseltext = '<!-- Text Corousel -->\n' +
         '<div class="row">\n' +
         '    <div class="col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 ">\n' +
         '        <div id="carousel-slider" data-ride="carousel" class="carousel slide  animate-in" data-anim-type="fade-in-up">\n' +
@@ -1904,8 +1899,7 @@ define(function (require, exports, module) {
         '</div>\n' +
         '<!-- End Text Carousel -->\n';
 
-    snippets.bs3portfoliosocialbuttons = '// bs3portfoliosocialbuttons    \n' +
-        '<!-- Social Buttons -->\n' +
+    snippets.bs3portfoliosocialbuttons = '<!-- Social Buttons -->\n' +
         '<div class="row animate-in" data-anim-type="fade-in-up">\n' +
         '    <div class="col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-8 col-lg-offset-2 scroll-me">\n' +
         '        <p>[INSERT A FIXED TEXT HERE]</p>\n' +
@@ -1921,12 +1915,11 @@ define(function (require, exports, module) {
         '</div>\n' +
         '<!-- End Social Buttons -->\n';
 
-    snippets.bs3portfolioservices = '// bs3portfolioservices\n' +
-        '<!-- SERVICE SECTION START -->\n' +
+    snippets.bs3portfolioservices = '<!-- SERVICE SECTION START -->\n' +
         '<div class="row text-center header">\n' +
         '    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 animate-in" data-anim-type="fade-in-up">\n' +
         '        <h3>Our Services</h3>\n' +
-        '        <hr />\n' +
+        '        <hr/>\n' +
         '    </div>\n' +
         '</div>\n' +
         '<div class="row animate-in" data-anim-type="fade-in-up">\n' +
@@ -1987,12 +1980,11 @@ define(function (require, exports, module) {
         '</div>\n' +
         '<!--SERVICE SECTION END-->\n';
 
-    snippets.bs3portfoliopricetable = '// bs3portfoliopricetable\n' +
-        '<!-- PRICING SECTION START -->\n' +
+    snippets.bs3portfoliopricetable = '<!-- PRICING SECTION START -->\n' +
         '<div class="row text-center header animate-in" data-anim-type="fade-in-up">\n' +
         '    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">\n' +
         '        <h3>Pricing Options</h3>\n' +
-        '        <hr />\n' +
+        '        <hr/>\n' +
         '    </div>\n' +
         '</div>\n' +
         '<div class="row pad-bottom animate-in" data-anim-type="fade-in-up">\n' +
@@ -2075,12 +2067,11 @@ define(function (require, exports, module) {
         '</div>\n' +
         '<!-- PRICING SECTION END -->\n';
 
-    snippets.bs3portfoliowork = '// bs3portfoliowork\n' +
-        '<!-- WORK SECTION START -->\n' +
+    snippets.bs3portfoliowork = '<!-- WORK SECTION START -->\n' +
         '<div class="row text-center header animate-in" data-anim-type="fade-in-up">\n' +
         '    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">\n' +
         '        <h3>Our Works</h3>\n' +
-        '        <hr />\n' +
+        '        <hr/>\n' +
         '    </div>\n' +
         '</div>\n' +
         '<div class="row text-center animate-in" data-anim-type="fade-in-up">\n' +
@@ -2098,7 +2089,7 @@ define(function (require, exports, module) {
         '    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 iphone">\n' +
         '        <div class="work-wrapper">\n' +
         '            <a class="fancybox-media" title="Image Title Goes Here" href="assets/img/work/1.jpg">\n' +
-        '                <img src="assets/img/work/1.jpg" class="img-responsive img-rounded 1" alt="" />\n' +
+        '                <img src="assets/img/work/1.jpg" class="img-responsive img-rounded 1" alt=""/>\n' +
         '            </a>\n' +
         '            <h4>Lorem ipsum dolor sit amet</h4>\n' +
         '        </div>\n' +
@@ -2106,7 +2097,7 @@ define(function (require, exports, module) {
         '    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 hotsite website">\n' +
         '        <div class="work-wrapper">\n' +
         '            <a class="fancybox-media" title="Image Title Goes Here" href="assets/img/work/2.jpg">\n' +
-        '                <img src="assets/img/work/2.jpg" class="img-responsive img-rounded" alt="" />\n' +
+        '                <img src="assets/img/work/2.jpg" class="img-responsive img-rounded" alt=""/>\n' +
         '            </a>\n' +
         '            <h4>Integer blandit odio congue leo tristique tempus</h4>\n' +
         '        </div>\n' +
@@ -2114,7 +2105,7 @@ define(function (require, exports, module) {
         '    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 iphone">\n' +
         '        <div class="work-wrapper">\n' +
         '            <a class="fancybox-media" title="Image Title Goes Here" href="assets/img/work/3.jpg">\n' +
-        '                <img src="assets/img/work/3.jpg" class="img-responsive img-rounded" alt="" />\n' +
+        '                <img src="assets/img/work/3.jpg" class="img-responsive img-rounded" alt=""/>\n' +
         '            </a>\n' +
         '            <h4>Morbi mollis lectus et ipsum</h4>\n' +
         '        </div>\n' +
@@ -2122,7 +2113,7 @@ define(function (require, exports, module) {
         '    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 hotsite">\n' +
         '        <div class="work-wrapper">\n' +
         '            <a class="fancybox-media" title="Image Title Goes Here" href="assets/img/work/4.jpg">\n' +
-        '                <img src="assets/img/work/4.jpg" class="img-responsive img-rounded" alt="" />\n' +
+        '                <img src="assets/img/work/4.jpg" class="img-responsive img-rounded" alt=""/>\n' +
         '            </a>\n' +
         '            <h4>Ut tincidunt tortor sit amet sagittis sagittis</h4>\n' +
         '        </div>\n' +
@@ -2130,7 +2121,7 @@ define(function (require, exports, module) {
         '    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 website">\n' +
         '        <div class="work-wrapper">\n' +
         '            <a class="fancybox-media" title="Image Title Goes Here" href="assets/img/work/5.jpg">\n' +
-        '                <img src="assets/img/work/5.jpg" class="img-responsive img-rounded" alt="" />\n' +
+        '                <img src="assets/img/work/5.jpg" class="img-responsive img-rounded" alt=""/>\n' +
         '            </a>\n' +
         '            <h4>Aliquam sit amet libero eget nibh varius ultricies</h4>\n' +
         '        </div>\n' +
@@ -2138,7 +2129,7 @@ define(function (require, exports, module) {
         '    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 android">\n' +
         '        <div class="work-wrapper">\n' +
         '            <a class="fancybox-media" title="Image Title Goes Here" href="assets/img/work/6.jpg">\n' +
-        '                <img src="assets/img/work/6.jpg" class="img-responsive img-rounded" alt="" />\n' +
+        '                <img src="assets/img/work/6.jpg" class="img-responsive img-rounded" alt=""/>\n' +
         '            </a>\n' +
         '            <h4>Nunc eget ipsum eget odio ultrices molestie</h4>\n' +
         '        </div>\n' +
@@ -2146,12 +2137,11 @@ define(function (require, exports, module) {
         '</div>\n' +
         '<!-- WORK SECTION END -->\n';
 
-    snippets.bs3portfolioteam = '// bs3portfolioteam\n' +
-        '<!-- TEAM SECTION START -->\n' +
+    snippets.bs3portfolioteam = '<!-- TEAM SECTION START -->\n' +
         '<div class="row text-center header animate-in" data-anim-type="fade-in-up">\n' +
         '    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">\n' +
         '        <h3>Our Team</h3>\n' +
-        '        <hr />\n' +
+        '        <hr/>\n' +
         '    </div>\n' +
         '</div>\n' +
         '<div class="row animate-in" data-anim-type="fade-in-up">\n' +
@@ -2210,12 +2200,11 @@ define(function (require, exports, module) {
         '</div>\n' +
         '<!-- TEAM SECTION END -->\n';
 
-    snippets.bs3portfoliocontact = '// bs3portfoliocontact\n' +
-        '<!-- CONTACT SECTION START -->\n' +
+    snippets.bs3portfoliocontact = '<!-- CONTACT SECTION START -->\n' +
         '<div class="row text-center header animate-in" data-anim-type="fade-in-up">\n' +
         '    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">\n' +
         '        <h3>Contact Details </h3>\n' +
-        '        <hr />\n' +
+        '        <hr/>\n' +
         '    </div>\n' +
         '</div>\n' +
         '<div class="row animate-in" data-anim-type="fade-in-up">\n' +
@@ -2250,8 +2239,7 @@ define(function (require, exports, module) {
         '</div>\n' +
         '<!--CONTACT SECTION END-->\n';
 
-    snippets.bs3portfoliosignupform = '// bs3portfoliosignupform\n' +
-        '<!-- SECTION SIGN UP START -->\n' +
+    snippets.bs3portfoliosignupform = '<!-- SECTION SIGN UP START -->\n' +
         '<!--\n' +
         '    Must use follow <style>\n' +
         '\n' +
@@ -2318,8 +2306,7 @@ define(function (require, exports, module) {
         '</div>\n' +
         '<!-- SECTION SIGN UP END -->\n';
 
-    snippets.bs3portfoliocopyright = '//bs3portfoliocopyright\n' +
-        '<section id="copyright">\n' +
+    snippets.bs3portfoliocopyright = '<section id="copyright">\n' +
         '    <div class="container">\n' +
         '        <div class="footer-div center">\n' +
         '            &copy; 2015 YourDomain | <a href="http://www.YourDomain.com/" target="_blank">by Your Company Here</a>\n' +
