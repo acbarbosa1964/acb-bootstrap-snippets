@@ -601,8 +601,7 @@ To get supplementary files and assets for Animated Portfolio Sample check [Boots
 ### License
 ---
 
-[MIT](https://raw.githubusercontent.com/acbarbosa1964/acb-bootstrap-snippets
-/master/LICENSE) for this project.
+[MIT](https://raw.githubusercontent.com/acbarbosa1964/acb-bootstrap-snippets/master/LICENSE) for this project.
 
 Copyright (c) 2015 Antonio Carlos Barbosa
 Released under the MIT license
