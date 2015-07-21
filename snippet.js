@@ -1777,7 +1777,7 @@ define(function (require, exports, module) {
         '<script src="assets/js/animations.min.js"></script>\n' +
         '<!-- End External Libs -->\n';
 
-    snippets.bs3portfoliojs = '// jQuery Functions inside tag <script>\n' +
+    snippets.bs3portfoliojs = '<!-- jQuery Functions inside tag <script> -->\n' +
         '$(document).ready(function () {\n' +
         '    // IMAGE BACKGROUND SLIDE SHOW\n' +
         '    $.vegas(\'slideshow\', {\n' +
@@ -1839,7 +1839,7 @@ define(function (require, exports, module) {
         '    });\n' +
         '}); \n' +
         'new WOW().init();\n' +
-        '// jQuery Function </script>\n';
+        '<!-- jQuery Function </script> -->\n';
 
     snippets.bs3portfoliomenu = '<!-- Replace or adapt body tag as follow     \n' +
         '    <body data-spy="scroll" data-target="#menu-section">\n' +
