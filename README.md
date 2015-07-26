@@ -561,7 +561,12 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
     snippets.bs3welllg
 	snippets.bs3wellsm
 	snippets.bs3well
+
+### Wireframe theme for Bootstrap 3 Support
     
+    snippets.bs3sketchcss = 'scketch/css/bootsketch.css';
+    snippets.bs3sketchjs = '<script src="scketch/js/vendors.min.js"></script>';
+
 ### Animated Portfolio Sample    
 
 	bs3portfoliocss
@@ -577,6 +582,26 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
 	bs3portfoliocontact
 	bs3portfoliosignupform
 	bs3portfoliocopyright
+    
+### Bootswatch Template Support
+
+bs3bootswatchcerulean
+bs3bootswatchcosmo
+bs3bootswatchcustom
+bs3bootswatchcyborg
+bs3bootswatchdarkly
+bs3bootswatchflatly
+bs3bootswatchjournal
+bs3bootswatchlumen
+bs3bootswatchpaper
+bs3bootswatchreadble
+bs3bootswatchsandstone
+bs3bootswatchsimplex
+bs3bootswatchslate
+bs3bootswatchspacelab
+bs3bootswatchsuperhero
+bs3bootswatchunited
+bs3bootswatchyeti
 
 To get supplementary files and assets for Animated Portfolio Sample check [Bootstrap Portfolio Project](https://github.com/acbarbosa1964/light-wave-bootstrap-portfolio-sample)
 
@@ -597,6 +622,8 @@ To get supplementary files and assets for Animated Portfolio Sample check [Boots
 - Isotope v1.5.25 - David DeSandro / Metafizzy - http://isotope.metafizzy.co
 - WOW - v1.1.2 - Matthieu Aussaguel - http://mynameismatthieu.com/WOW/
 - Source-code editor used in this project - Brackets - http://www.brackets.io
+- Bootsketch - https://github.com/Yago/Bootsketch
+- Bootswatch - Copyright 2014 Thomas Park - http://bootswatch.com/
 
 ### License
 ---
