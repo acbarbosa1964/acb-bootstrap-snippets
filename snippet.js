@@ -2332,7 +2332,7 @@ define(function (require, exports, module) {
     // Bootsketch : Wireframe theme for Bootstrap 3 Support - https://github.com/Yago/Bootsketch
 
     snippets.bs3sketchcss = '<link href="sketch/css/bootsketch.css" rel="stylesheet" />\n';
-    snippets.bs3sketchjs = '<script src="scketch/js/vendors.min.js"></script>\n';
+    snippets.bs3sketchjs = '<script src="sketch/js/vendors.min.js"></script>\n';
 
     // Bootwatch Templates
 
