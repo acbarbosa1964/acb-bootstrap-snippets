@@ -2329,5 +2329,31 @@ define(function (require, exports, module) {
         '            text-transform: uppercase;\n' +
         '        }\n';
 
+    // Bootsketch : Wireframe theme for Bootstrap 3 Support - https://github.com/Yago/Bootsketch
+
+    snippets.bs3sketchcss = 'scketch/css/bootsketch.css';
+    snippets.bs3sketchjs = '<script src="scketch/js/vendors.min.js"></script>';
+
+    // Bootwatch Templates
+
+    snippets.bs3bootwatchcerulean = 'https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.5/cerulean/bootstrap.min.css\n';
+    snippets.bs3bootwatchcosmo = 'https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.5/cosmo/bootstrap.min.css\n';
+    snippets.bs3bootwatchcustom = 'https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.5/custom/bootstrap.min.css\n';
+    snippets.bs3bootwatchcyborg = 'https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.5/cyborg/bootstrap.min.css\n';
+    snippets.bs3bootwatchdarkly = 'https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.5/darkly/bootstrap.min.css\n';
+    snippets.bs3bootwatchflatly = 'https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.5/flatly/bootstrap.min.css\n';
+    snippets.bs3bootwatchjournal = 'https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.5/journal/bootstrap.min.css\n';
+    snippets.bs3bootwatchlumen = 'https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.5/lumen/bootstrap.min.css\n';
+    snippets.bs3bootwatchpaper = 'https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.5/paper/bootstrap.min.css\n';
+    snippets.bs3bootwatchreadble = 'https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.5/readable/bootstrap.min.css\n';
+    snippets.bs3bootwatchsandstone = 'https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.5/sandstone/bootstrap.min.css\n';
+    snippets.bs3bootwatchsimplex = 'https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.5/simplex/bootstrap.min.css\n';
+    snippets.bs3bootwatchslate = 'https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.5/slate/bootstrap.min.css\n';
+    snippets.bs3bootwatchspacelab = 'https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.5/spacelab/bootstrap.min.css\n';
+    snippets.bs3bootwatchsuperhero = 'https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.5/superhero/bootstrap.min.css\n';
+    snippets.bs3bootwatchunited = 'https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.5/united/bootstrap.min.css\n';
+    snippets.bs3bootwatchyeti = 'https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.5/yeti/bootstrap.min.css\n';
+
     module.exports = snippets;
 });
+
