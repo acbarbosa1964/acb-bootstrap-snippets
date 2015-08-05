@@ -1,4 +1,5 @@
 bs3
+bs3template
 bs3alert
 bs3alertdanger
 bs3alertinfo
