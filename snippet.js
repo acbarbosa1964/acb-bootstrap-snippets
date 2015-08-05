@@ -82,6 +82,8 @@ define(function (require, exports, module) {
         '\n' +
         '</html>\n';
 
+    snippets.bs3template = snippets.bs3;
+
     // Alerts
 
     snippets.bs3alertdanger = '<div class="alert alert-danger">\n' +
