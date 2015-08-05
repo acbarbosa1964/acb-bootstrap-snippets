@@ -20,13 +20,14 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
 1. **Enable ACB Bootstrap Snippets**<br/>
    Under main menu select **Edit > Enable ACB Bootstrap Snippets**
 2. Starting typing "bs3" you'll see the snippets list (code hint provider), just pick a snippet and press ENTER, or   
-3. Enter a snippet and hit the **Tab** key.
+3. Enter a snippet and hit the **Tab** key (Alternatively you can also hit the key **DOWN**).
 
 ## Snippets list
 
 ### Bootstrap 3 - Minimum Template
 
 	bs3 - Minimum Bs3 Template
+    bs3template - Minimum Bs3 Template (Same command as bs3)
 
 ### Alerts
 
@@ -100,10 +101,10 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
 
 ### CDN
 
-	cdn
-	cdnjs
-	cdncss
-	cdnmodernizr
+	bs3cdn
+	bs3cdnjs
+	bs3cdncss
+	bs3cdnmodernizr
 
 ### Clearfix
 
