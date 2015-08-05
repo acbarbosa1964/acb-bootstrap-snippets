@@ -68,7 +68,7 @@ define(function (require, exports, module) {
             var cursorPosition, line, snippetKey, start;
 
             if (enabled) {
-                if ((event.type === 'keydown') && (event.keyCode === KeyEvent.DOM_VK_TAB)) {
+                if ((event.type === 'keydown') && (event.keyCode === KeyEvent.DOM_VK_TAB || event.keyCode === KeyEvent.DOM_VK_DOWN)) {
                     cursorPosition = editor.getCursorPos();
                     line = editor.document.getLine(cursorPosition.line);
                     snippetKey = parseLine(line, cursorPosition.ch);
