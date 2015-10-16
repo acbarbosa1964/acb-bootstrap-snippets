@@ -36,7 +36,7 @@ define(function (require, exports, module) {
         Menus = brackets.getModule('command/Menus'),
         CommandManager = brackets.getModule('command/CommandManager'),
         KeyEvent = brackets.getModule('utils/KeyEvent'),
-
+		trackService = require('trackingClient').init(),
         snippets = require('snippet'),
         bsfuncHint = require('text!bs-func.txt'),
         enabled = false,
