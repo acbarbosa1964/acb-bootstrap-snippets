@@ -1,6 +1,6 @@
 /*
  * The MIT License (MIT)
- * Copyright (c) 2014 Antonio Carlos Barbosa. All rights reserved.
+ * Copyright (c) 2015 Antonio Carlos Barbosa. All rights reserved.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a
  * copy of this software and associated documentation files (the "Software"),
@@ -29,8 +29,29 @@ define(function (require, exports, module) {
     'use strict';
 
     var snippets = {};
+    var cdncss = '    <link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">\n';
+    var cdnjs = '    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>\n' +
+        '    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>\n';
+
 
     // Bootstrap 3 - Minimum Template
+
+    snippets.bs3html = '<!DOCTYPE html>\n' +
+        '<html lang="en">\n' +
+        '<head>\n' +
+        '    <meta charset="utf-8">\n' +
+        '    <meta name="viewport" content="width=device-width, initial-scale=1.0">\n' +
+        cdncss +
+        '\n' +
+        '    <title>Minimum Bootstrap HTML Skeleton</title>\n<!--  -->\n<style>\n\n</style>\n\n' +
+        '</head>\n' +
+        '\n' +
+        '<body>\n' +
+        '\n' +
+        cdnjs +
+        '\n<script>\n\n</script>\n' +
+        '</body>\n' +
+        '</html>\n';
 
     snippets.bs3 = '<!doctype html>\n' +
         '\n' +
@@ -56,12 +77,12 @@ define(function (require, exports, module) {
         '            padding-bottom: 20px;\n' +
         '        }\n' +
         '    </style>\n' +
-        '    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">\n' +
+        cdncss +
         '\n' +
         '    <! -- WE ASSUME YOU ARE USING A main.css FOR CSS CUSTOMIZATION -->\n' +
         '    <!-- link rel="stylesheet" href="./css/main.css"> -->\n' +
         '    <! -- DOWNLOAD LAST VERSION IN http://modernizr.com/ -->\n' +
-        '    <!-- script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script> -->\n' +
+        '    <!-- script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script> -->\n' +
         '</head>\n' +
         '\n' +
         '<body>\n' +
@@ -76,13 +97,12 @@ define(function (require, exports, module) {
         '\n' +
         '    <!-- Coding End -->\n' +
         '\n' +
-        '    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>\n' +
-        '    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>\n' +
+        cdnjs +
         '</body>\n' +
         '\n' +
         '</html>\n';
 
-    snippets.bs3template = snippets.bs3;
+    snippets.bs3template = snippets.bs3html;
 
     // Alerts
 
@@ -221,16 +241,24 @@ define(function (require, exports, module) {
 
     // CDN
 
-    snippets.bs3cdn = '<link rel="stylesheet" media="screen" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">\n' +
-        '<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>\n' +
-        '<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>\n';
+    snippets.bs3cdn = cdncss + cdnjs;
 
-    snippets.bs3cdnjs = '<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>\n' +
-        '<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>\n';
+    snippets.bs3cdnjs = cdnjs;
 
-    snippets.bs3cdncss = '<link rel="stylesheet" media="screen" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">\n';
+    snippets.bs3cdncss = cdncss;
 
-    snippets.bs3cdnmodernizr = '<link rel="stylesheet" media="screen" href="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js">\n';
+    snippets.bs3cdnmodernizr = '<link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js">\n';
+
+    snippets.bs3cdndatatablecss = '<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.9/css/jquery.dataTables.min.css">';
+
+    snippets.bs3cdndatatablejs = '<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js"></script>';
+
+    snippets.bs3cdnjasnycss = '<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/css/jasny-bootstrap.css">';
+
+    snippets.bs3cdnjasnyjs = '<script type="text/javascript" language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/js/jasny-bootstrap.min.js"></script>';
+
+    snippets.bs3cdncsvimportjs = '<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>';
+
 
     // Clearfix
 
@@ -576,7 +604,7 @@ define(function (require, exports, module) {
     snippets.bs3iconsample = '<!--  <!DOCTYPE html>\n' +
         '<html>\n' +
         '<head>\n' +
-        '<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">\n' +
+        snippets.bs3cdncss + '\n' +
         '<style>\n' +
         'i.tiny {font-size: 1em;}\n' +
         'i.small {font-size: 2em;}\n' +
@@ -838,9 +866,7 @@ define(function (require, exports, module) {
         '  <title>Bootstrap Image Gallery Sample</title>\n' +
         '  <meta charset="utf-8">\n' +
         '  <meta name="viewport" content="width=device-width, initial-scale=1">\n' +
-        '  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">\n' +
-        '  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>\n' +
-        '  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>\n' +
+        cdncss + cdnjs +
         '</head>\n' +
         '<body>\n' +
         '\n' +
@@ -1408,232 +1434,445 @@ define(function (require, exports, module) {
     // Table
 
     snippets.bs3table = '<table class="table">\n' +
-        '    <thead>\n' +
-        '      <tr>\n' +
-        '        <th>[Title]</th>\n' +
-        '        <th>[Title]</th>\n' +
-        '        <th>[Title]</th>\n' +
-        '      </tr>\n' +
-        '    </thead>\n' +
-        '    <tbody>\n' +
-        '      <tr>\n' +
-        '        <td>[data]</td>\n' +
-        '        <td>[data]</td>\n' +
-        '        <td>[data]</td>\n' +
-        '      </tr>\n' +
-        '      <tr>\n' +
-        '        <td>[data]</td>\n' +
-        '        <td>[data]</td>\n' +
-        '        <td>[data]</td>\n' +
-        '      </tr>\n' +
-        '    </tbody>\n' +
-        '  </table>\n';
+        '        <thead>\n' +
+        '            <tr>\n' +
+        '                <th>[Title]</th>\n' +
+        '                <th>[Title]</th>\n' +
+        '                <th>[Title]</th>\n' +
+        '            </tr>\n' +
+        '        </thead>\n' +
+        '        <tfoot>\n' +
+        '            <tr>\n' +
+        '                <th>[Title]</th>\n' +
+        '                <th>[Title]</th>\n' +
+        '                <th>[Title]</th>\n' +
+        '            </tr>        \n' +
+        '        </tfoot>\n' +
+        '        <tbody>\n' +
+        '            <tr>\n' +
+        '                <td>[data]</td>\n' +
+        '                <td>[data]</td>\n' +
+        '                <td>[data]</td>\n' +
+        '            </tr>\n' +
+        '            <tr>\n' +
+        '                <td>[data]</td>\n' +
+        '                <td>[data]</td>\n' +
+        '                <td>[data]</td>\n' +
+        '            </tr>\n' +
+        '        </tbody>\n' +
+        '    </table>\n';
 
     snippets.bs3tablehover = '<table class="table table-hover">\n' +
-        '    <thead>\n' +
-        '      <tr>\n' +
-        '        <th>[Title]</th>\n' +
-        '        <th>[Title]</th>\n' +
-        '        <th>[Title]</th>\n' +
-        '      </tr>\n' +
-        '    </thead>\n' +
-        '    <tbody>\n' +
-        '      <tr>\n' +
-        '        <td>[data]</td>\n' +
-        '        <td>[data]</td>\n' +
-        '        <td>[data]</td>\n' +
-        '      </tr>\n' +
-        '      <tr>\n' +
-        '        <td>[data]</td>\n' +
-        '        <td>[data]</td>\n' +
-        '        <td>[data]</td>\n' +
-        '      </tr>\n' +
-        '    </tbody>\n' +
-        '  </table>\n';
+        '        <thead>\n' +
+        '            <tr>\n' +
+        '                <th>[Title]</th>\n' +
+        '                <th>[Title]</th>\n' +
+        '                <th>[Title]</th>\n' +
+        '            </tr>\n' +
+        '        </thead>\n' +
+        '        <tfoot>\n' +
+        '            <tr>\n' +
+        '                <th>[Title]</th>\n' +
+        '                <th>[Title]</th>\n' +
+        '                <th>[Title]</th>\n' +
+        '            </tr>        \n' +
+        '        </tfoot>\n' +
+        '        <tbody>\n' +
+        '            <tr>\n' +
+        '                <td>[data]</td>\n' +
+        '                <td>[data]</td>\n' +
+        '                <td>[data]</td>\n' +
+        '            </tr>\n' +
+        '            <tr>\n' +
+        '                <td>[data]</td>\n' +
+        '                <td>[data]</td>\n' +
+        '                <td>[data]</td>\n' +
+        '            </tr>\n' +
+        '        </tbody>\n' +
+        '    </table>\n';
+
+    snippets.bs3tablehovercolor = '        .table-hover tbody tr:hover td,\n' +
+        '        .table-hover tbody tr:hover th {\n' +
+        '            background-color: #acb;\n' +
+        '        }\n';
 
 
-    snippets.bs3tablebordered = '<table class="table table-bordered">\n' +
-        '    <thead>\n' +
-        '      <tr>\n' +
-        '        <th>[Title]</th>\n' +
-        '        <th>[Title]</th>\n' +
-        '        <th>[Title]</th>\n' +
-        '      </tr>\n' +
-        '    </thead>\n' +
-        '    <tbody>\n' +
-        '      <tr>\n' +
-        '        <td>[data]</td>\n' +
-        '        <td>[data]</td>\n' +
-        '        <td>[data]</td>\n' +
-        '      </tr>\n' +
-        '      <tr>\n' +
-        '        <td>[data]</td>\n' +
-        '        <td>[data]</td>\n' +
-        '        <td>[data]</td>\n' +
-        '      </tr>\n' +
-        '    </tbody>\n' +
-        '  </table>\n';
+    snippets.bs3tablebordered = '    <table class="table table-bordered">\n' +
+        '        <thead>\n' +
+        '            <tr>\n' +
+        '                <th>[Title]</th>\n' +
+        '                <th>[Title]</th>\n' +
+        '                <th>[Title]</th>\n' +
+        '            </tr>\n' +
+        '        </thead>\n' +
+        '        <tfoot>\n' +
+        '            <tr>\n' +
+        '                <th>[Title]</th>\n' +
+        '                <th>[Title]</th>\n' +
+        '                <th>[Title]</th>\n' +
+        '            </tr>        \n' +
+        '        </tfoot>\n' +
+        '        <tbody>\n' +
+        '            <tr>\n' +
+        '                <td>[data]</td>\n' +
+        '                <td>[data]</td>\n' +
+        '                <td>[data]</td>\n' +
+        '            </tr>\n' +
+        '            <tr>\n' +
+        '                <td>[data]</td>\n' +
+        '                <td>[data]</td>\n' +
+        '                <td>[data]</td>\n' +
+        '            </tr>\n' +
+        '        </tbody>\n' +
+        '    </table>\n';
 
+    snippets.bs3tableborderedcolor = '        .table {\n' +
+        '            border: 2.5px solid red;\n' +
+        '        }\n' +
+        '        \n' +
+        '        .table-bordered > thead > tr > th,\n' +
+        '        .table-bordered > tbody > tr > th,\n' +
+        '        .table-bordered > tfoot > tr > th,\n' +
+        '        .table-bordered > thead > tr > td,\n' +
+        '        .table-bordered > tbody > tr > td,\n' +
+        '        .table-bordered > tfoot > tr > td {\n' +
+        '            border: 2.5px solid red;\n' +
+        '        }\n';
+
+
+    snippets.bs3addroundpanelsolid = '<div class="panel panel-default addroundsolid">\n\n' +
+        '</div>\n';
+
+    snippets.bs3addroundsolid = '        .addroundsolid {\n' +
+        '            -webkit-border-radius: 16px;\n' +
+        '            -khtml-border-radius: 16px;\n' +
+        '            -moz-border-radius: 16px;\n' +
+        '            border-radius: 16px;\n' +
+        '            border: 2px solid #acb;\n' +
+        '            margin: 5px;\n' +
+        '        }\n';
+
+    snippets.bs3addroundpaneldashed = '<div class="panel panel-default addrounddashed">\n\n' +
+        '</div>\n';
+
+    snippets.bs3addrounddashed = '        .addrounddashed {\n' +
+        '            -webkit-border-radius: 16px;\n' +
+        '            -khtml-border-radius: 16px;\n' +
+        '            -moz-border-radius: 16px;\n' +
+        '            border-radius: 16px;\n' +
+        '            border: 2px dashed #acb;\n' +
+        '            margin: 5px;\n' +
+        '        }\n';
+
+    snippets.bs3addroundpaneldotted = '<div class="panel panel-default addrounddotted">\n\n' +
+        '</div>\n';
+
+    snippets.bs3addrounddotted = '        .addrounddotted {\n' +
+        '            -webkit-border-radius: 16px;\n' +
+        '            -khtml-border-radius: 16px;\n' +
+        '            -moz-border-radius: 16px;\n' +
+        '            border-radius: 16px;\n' +
+        '            border: 2px dotted #acb;\n' +
+        '            margin: 5px;\n' +
+        '        }\n';
+
+    snippets.bs3addroundpaneldouble = '<div class="panel panel-default addrounddouble">\n\n' +
+        '</div>\n';
+
+    snippets.bs3addrounddouble = '        .addrounddouble {\n' +
+        '            -webkit-border-radius: 16px;\n' +
+        '            -khtml-border-radius: 16px;\n' +
+        '            -moz-border-radius: 16px;\n' +
+        '            border-radius: 16px;\n' +
+        '            border: 5px double #acb;\n' +
+        '            margin: 5px;\n' +
+        '        }\n';
+
+    snippets.bs3addroundpanelgroove = '<div class="panel panel-default addroundgroove">\n\n' +
+        '</div>\n';
+
+    snippets.bs3addroundgroove = '        .addroundgroove {\n' +
+        '            -webkit-border-radius: 16px;\n' +
+        '            -khtml-border-radius: 16px;\n' +
+        '            -moz-border-radius: 16px;\n' +
+        '            border-radius: 16px;\n' +
+        '            border: 5px groove #acb;\n' +
+        '            margin: 5px;\n' +
+        '        }\n';
+
+    snippets.bs3addroundpanelridge = '<div class="panel panel-default addroundridge">\n\n' +
+        '</div>\n';
+
+    snippets.bs3addroundridge = '        .addroundridge {\n' +
+        '            -webkit-border-radius: 16px;\n' +
+        '            -khtml-border-radius: 16px;\n' +
+        '            -moz-border-radius: 16px;\n' +
+        '            border-radius: 16px;\n' +
+        '            border: 5px ridge #acb;\n' +
+        '            margin: 5px;\n' +
+        '        }\n';
+
+    snippets.bs3addroundpanelinset = '<div class="panel panel-default addroundinset">\n\n' +
+        '</div>\n';
+
+    snippets.bs3addroundinset = '        .addroundinset {\n' +
+        '            -webkit-border-radius: 16px;\n' +
+        '            -khtml-border-radius: 16px;\n' +
+        '            -moz-border-radius: 16px;\n' +
+        '            border-radius: 16px;\n' +
+        '            border: 5px inset #acb;\n' +
+        '            margin: 5px;\n' +
+        '        }\n';
+
+    snippets.bs3addroundpaneloutset = '<div class="panel panel-default addroundoutset">\n\n' +
+        '</div>\n';
+
+    snippets.bs3addroundoutset = '        .addroundoutset {\n' +
+        '            -webkit-border-radius: 16px;\n' +
+        '            -khtml-border-radius: 16px;\n' +
+        '            -moz-border-radius: 16px;\n' +
+        '            border-radius: 16px;\n' +
+        '            border: 5px outset #acb;\n' +
+        '            margin: 5px;\n' +
+        '        }\n';
+
+    snippets.bs3addroundpanelhidden = '<div class="panel panel-default addroundhidden">\n\n' +
+        '</div>\n';
+
+    snippets.bs3addroundhidden = '        .addroundhidden {\n' +
+        '            border: 0px hidden #acb;\n' +
+        '            margin: 5px;\n' +
+        '        }\n';
+
+
+    snippets.bs3tableborderedhcolor = '        .table-bordered > thead > tr > th,\n' +
+        '        .table-bordered > tbody > tr > th,\n' +
+        '        .table-bordered > tfoot > tr > th,\n' +
+        '        .table-bordered > thead > tr > td,\n' +
+        '        .table-bordered > tbody > tr > td,\n' +
+        '        .table-bordered > tfoot > tr > td {\n' +
+        '            border: 1px solid red;\n' +
+        '            border-right-width: 0px;\n' +
+        '            border-left-width: 0px;\n' +
+        '        }\n';
 
     snippets.bs3tableborderedhover = '<table class="table table-bordered table-hover">\n' +
-        '    <thead>\n' +
-        '      <tr>\n' +
-        '        <th>[Title]</th>\n' +
-        '        <th>[Title]</th>\n' +
-        '        <th>[Title]</th>\n' +
-        '      </tr>\n' +
-        '    </thead>\n' +
-        '    <tbody>\n' +
-        '      <tr>\n' +
-        '        <td>[data]</td>\n' +
-        '        <td>[data]</td>\n' +
-        '        <td>[data]</td>\n' +
-        '      </tr>\n' +
-        '      <tr>\n' +
-        '        <td>[data]</td>\n' +
-        '        <td>[data]</td>\n' +
-        '        <td>[data]</td>\n' +
-        '      </tr>\n' +
-        '    </tbody>\n' +
-        '  </table>\n';
+        '        <thead>\n' +
+        '            <tr>\n' +
+        '                <th>[Title]</th>\n' +
+        '                <th>[Title]</th>\n' +
+        '                <th>[Title]</th>\n' +
+        '            </tr>\n' +
+        '        </thead>\n' +
+        '        <tfoot>\n' +
+        '            <tr>\n' +
+        '                <th>[Title]</th>\n' +
+        '                <th>[Title]</th>\n' +
+        '                <th>[Title]</th>\n' +
+        '            </tr>        \n' +
+        '        </tfoot>\n' +
+        '        <tbody>\n' +
+        '            <tr>\n' +
+        '                <td>[data]</td>\n' +
+        '                <td>[data]</td>\n' +
+        '                <td>[data]</td>\n' +
+        '            </tr>\n' +
+        '            <tr>\n' +
+        '                <td>[data]</td>\n' +
+        '                <td>[data]</td>\n' +
+        '                <td>[data]</td>\n' +
+        '            </tr>\n' +
+        '        </tbody>\n' +
+        '    </table>\n';
 
     snippets.bs3tablecondensed = '<table class="table table-condensed">\n' +
-        '    <thead>\n' +
-        '      <tr>\n' +
-        '        <th>[Title]</th>\n' +
-        '        <th>[Title]</th>\n' +
-        '        <th>[Title]</th>\n' +
-        '      </tr>\n' +
-        '    </thead>\n' +
-        '    <tbody>\n' +
-        '      <tr>\n' +
-        '        <td>[data]</td>\n' +
-        '        <td>[data]</td>\n' +
-        '        <td>[data]</td>\n' +
-        '      </tr>\n' +
-        '      <tr>\n' +
-        '        <td>[data]</td>\n' +
-        '        <td>[data]</td>\n' +
-        '        <td>[data]</td>\n' +
-        '      </tr>\n' +
-        '    </tbody>\n' +
-        '  </table>\n';
+        '        <thead>\n' +
+        '            <tr>\n' +
+        '                <th>[Title]</th>\n' +
+        '                <th>[Title]</th>\n' +
+        '                <th>[Title]</th>\n' +
+        '            </tr>\n' +
+        '        </thead>\n' +
+        '        <tfoot>\n' +
+        '            <tr>\n' +
+        '                <th>[Title]</th>\n' +
+        '                <th>[Title]</th>\n' +
+        '                <th>[Title]</th>\n' +
+        '            </tr>        \n' +
+        '        </tfoot>\n' +
+        '        <tbody>\n' +
+        '            <tr>\n' +
+        '                <td>[data]</td>\n' +
+        '                <td>[data]</td>\n' +
+        '                <td>[data]</td>\n' +
+        '            </tr>\n' +
+        '            <tr>\n' +
+        '                <td>[data]</td>\n' +
+        '                <td>[data]</td>\n' +
+        '                <td>[data]</td>\n' +
+        '            </tr>\n' +
+        '        </tbody>\n' +
+        '    </table>\n';
 
     snippets.bs3tablecondensedhover = '<table class="table table-condensed table-hover">\n' +
-        '    <thead>\n' +
-        '      <tr>\n' +
-        '        <th>[Title]</th>\n' +
-        '        <th>[Title]</th>\n' +
-        '        <th>[Title]</th>\n' +
-        '      </tr>\n' +
-        '    </thead>\n' +
-        '    <tbody>\n' +
-        '      <tr>\n' +
-        '        <td>[data]</td>\n' +
-        '        <td>[data]</td>\n' +
-        '        <td>[data]</td>\n' +
-        '      </tr>\n' +
-        '      <tr>\n' +
-        '        <td>[data]</td>\n' +
-        '        <td>[data]</td>\n' +
-        '        <td>[data]</td>\n' +
-        '      </tr>\n' +
-        '    </tbody>\n' +
-        '  </table>\n';
+        '        <thead>\n' +
+        '            <tr>\n' +
+        '                <th>[Title]</th>\n' +
+        '                <th>[Title]</th>\n' +
+        '                <th>[Title]</th>\n' +
+        '            </tr>\n' +
+        '        </thead>\n' +
+        '        <tfoot>\n' +
+        '            <tr>\n' +
+        '                <th>[Title]</th>\n' +
+        '                <th>[Title]</th>\n' +
+        '                <th>[Title]</th>\n' +
+        '            </tr>        \n' +
+        '        </tfoot>\n' +
+        '        <tbody>\n' +
+        '            <tr>\n' +
+        '                <td>[data]</td>\n' +
+        '                <td>[data]</td>\n' +
+        '                <td>[data]</td>\n' +
+        '            </tr>\n' +
+        '            <tr>\n' +
+        '                <td>[data]</td>\n' +
+        '                <td>[data]</td>\n' +
+        '                <td>[data]</td>\n' +
+        '            </tr>\n' +
+        '        </tbody>\n' +
+        '    </table>\n';
 
 
     snippets.bs3tableresponsive = '<div class="table-responsive">\n' +
-        '	<table class="table">\n' +
-        '    <thead>\n' +
-        '      <tr>\n' +
-        '        <th>[Title]</th>\n' +
-        '        <th>[Title]</th>\n' +
-        '        <th>[Title]</th>\n' +
-        '      </tr>\n' +
-        '    </thead>\n' +
-        '    <tbody>\n' +
-        '      <tr>\n' +
-        '        <td>[data]</td>\n' +
-        '        <td>[data]</td>\n' +
-        '        <td>[data]</td>\n' +
-        '      </tr>\n' +
-        '      <tr>\n' +
-        '        <td>[data]</td>\n' +
-        '        <td>[data]</td>\n' +
-        '        <td>[data]</td>\n' +
-        '      </tr>\n' +
-        '    </tbody>\n' +
-        '  </table>\n' +
-        '</div>\n';
+        '        <thead>\n' +
+        '            <tr>\n' +
+        '                <th>[Title]</th>\n' +
+        '                <th>[Title]</th>\n' +
+        '                <th>[Title]</th>\n' +
+        '            </tr>\n' +
+        '        </thead>\n' +
+        '        <tfoot>\n' +
+        '            <tr>\n' +
+        '                <th>[Title]</th>\n' +
+        '                <th>[Title]</th>\n' +
+        '                <th>[Title]</th>\n' +
+        '            </tr>        \n' +
+        '        </tfoot>\n' +
+        '        <tbody>\n' +
+        '            <tr>\n' +
+        '                <td>[data]</td>\n' +
+        '                <td>[data]</td>\n' +
+        '                <td>[data]</td>\n' +
+        '            </tr>\n' +
+        '            <tr>\n' +
+        '                <td>[data]</td>\n' +
+        '                <td>[data]</td>\n' +
+        '                <td>[data]</td>\n' +
+        '            </tr>\n' +
+        '        </tbody>\n' +
+        '    </table>\n';
 
     snippets.bs3tableresponsivehover = '<div class="table-responsive">\n' +
-        '	<table class="table table-hover">\n' +
-        '    <thead>\n' +
-        '      <tr>\n' +
-        '        <th>[Title]</th>\n' +
-        '        <th>[Title]</th>\n' +
-        '        <th>[Title]</th>\n' +
-        '      </tr>\n' +
-        '    </thead>\n' +
-        '    <tbody>\n' +
-        '      <tr>\n' +
-        '        <td>[data]</td>\n' +
-        '        <td>[data]</td>\n' +
-        '        <td>[data]</td>\n' +
-        '      </tr>\n' +
-        '      <tr>\n' +
-        '        <td>[data]</td>\n' +
-        '        <td>[data]</td>\n' +
-        '        <td>[data]</td>\n' +
-        '      </tr>\n' +
-        '    </tbody>\n' +
-        '  </table>\n' +
-        '</div>\n';
+        '        <thead>\n' +
+        '            <tr>\n' +
+        '                <th>[Title]</th>\n' +
+        '                <th>[Title]</th>\n' +
+        '                <th>[Title]</th>\n' +
+        '            </tr>\n' +
+        '        </thead>\n' +
+        '        <tfoot>\n' +
+        '            <tr>\n' +
+        '                <th>[Title]</th>\n' +
+        '                <th>[Title]</th>\n' +
+        '                <th>[Title]</th>\n' +
+        '            </tr>        \n' +
+        '        </tfoot>\n' +
+        '        <tbody>\n' +
+        '            <tr>\n' +
+        '                <td>[data]</td>\n' +
+        '                <td>[data]</td>\n' +
+        '                <td>[data]</td>\n' +
+        '            </tr>\n' +
+        '            <tr>\n' +
+        '                <td>[data]</td>\n' +
+        '                <td>[data]</td>\n' +
+        '                <td>[data]</td>\n' +
+        '            </tr>\n' +
+        '        </tbody>\n' +
+        '    </table>\n';
 
     snippets.bs3tablestriped = '<table class="table table-striped">\n' +
-        '    <thead>\n' +
-        '      <tr>\n' +
-        '        <th>[Title]</th>\n' +
-        '        <th>[Title]</th>\n' +
-        '        <th>[Title]</th>\n' +
-        '      </tr>\n' +
-        '    </thead>\n' +
-        '    <tbody>\n' +
-        '      <tr>\n' +
-        '        <td>[data]</td>\n' +
-        '        <td>[data]</td>\n' +
-        '        <td>[data]</td>\n' +
-        '      </tr>\n' +
-        '      <tr>\n' +
-        '        <td>[data]</td>\n' +
-        '        <td>[data]</td>\n' +
-        '        <td>[data]</td>\n' +
-        '      </tr>\n' +
-        '    </tbody>\n' +
-        '  </table>\n';
+        '        <thead>\n' +
+        '            <tr>\n' +
+        '                <th>[Title]</th>\n' +
+        '                <th>[Title]</th>\n' +
+        '                <th>[Title]</th>\n' +
+        '            </tr>\n' +
+        '        </thead>\n' +
+        '        <tfoot>\n' +
+        '            <tr>\n' +
+        '                <th>[Title]</th>\n' +
+        '                <th>[Title]</th>\n' +
+        '                <th>[Title]</th>\n' +
+        '            </tr>        \n' +
+        '        </tfoot>\n' +
+        '        <tbody>\n' +
+        '            <tr>\n' +
+        '                <td>[data]</td>\n' +
+        '                <td>[data]</td>\n' +
+        '                <td>[data]</td>\n' +
+        '            </tr>\n' +
+        '            <tr>\n' +
+        '                <td>[data]</td>\n' +
+        '                <td>[data]</td>\n' +
+        '                <td>[data]</td>\n' +
+        '            </tr>\n' +
+        '        </tbody>\n' +
+        '    </table>\n';
+
+    snippets.bs3tablestripedbgcolor = '        .table-striped > tbody > tr:nth-child(2n+1) > td,\n' +
+        '        .table-striped > tbody > tr:nth-child(2n+1) > th {\n' +
+        '            background-color: #acbedc;\n' +
+        '        }\n';
+
+    snippets.bs3tablestripedcolumnodd = '        .table-striped-column > tbody > tr td:nth-of-type(odd) {\n' +
+        '            background-color: #dceacb;\n' +
+        '        }\n';
+
+    snippets.bs3tablestripedcolumneven = '   .table-striped-column-odd > tbody > tr td:nth-of-type(even) {\n' +
+        '       background-color: #dceacb;\n' +
+        '   }\n';
 
 
     snippets.bs3tablestripedhover = '<table class="table table-striped table-hover">\n' +
-        '    <thead>\n' +
-        '      <tr>\n' +
-        '        <th>[Title]</th>\n' +
-        '        <th>[Title]</th>\n' +
-        '        <th>[Title]</th>\n' +
-        '      </tr>\n' +
-        '    </thead>\n' +
-        '    <tbody>\n' +
-        '      <tr>\n' +
-        '        <td>[data]</td>\n' +
-        '        <td>[data]</td>\n' +
-        '        <td>[data]</td>\n' +
-        '      </tr>\n' +
-        '      <tr>\n' +
-        '        <td>[data]</td>\n' +
-        '        <td>[data]</td>\n' +
-        '        <td>[data]</td>\n' +
-        '      </tr>\n' +
-        '    </tbody>\n' +
-        '  </table>\n';
+        '        <thead>\n' +
+        '            <tr>\n' +
+        '                <th>[Title]</th>\n' +
+        '                <th>[Title]</th>\n' +
+        '                <th>[Title]</th>\n' +
+        '            </tr>\n' +
+        '        </thead>\n' +
+        '        <tfoot>\n' +
+        '            <tr>\n' +
+        '                <th>[Title]</th>\n' +
+        '                <th>[Title]</th>\n' +
+        '                <th>[Title]</th>\n' +
+        '            </tr>        \n' +
+        '        </tfoot>\n' +
+        '        <tbody>\n' +
+        '            <tr>\n' +
+        '                <td>[data]</td>\n' +
+        '                <td>[data]</td>\n' +
+        '                <td>[data]</td>\n' +
+        '            </tr>\n' +
+        '            <tr>\n' +
+        '                <td>[data]</td>\n' +
+        '                <td>[data]</td>\n' +
+        '                <td>[data]</td>\n' +
+        '            </tr>\n' +
+        '        </tbody>\n' +
+        '    </table>\n';
 
     snippets.bs3tablecontextual = '<table class="table">\n' +
         '    <thead>\n' +
@@ -1643,6 +1882,13 @@ define(function (require, exports, module) {
         '        <th>[Title]</th>\n' +
         '      </tr>\n' +
         '    </thead>\n' +
+        '    <tfoot>\n' +
+        '      <tr>\n' +
+        '        <th>[Title]</th>\n' +
+        '        <th>[Title]</th>\n' +
+        '        <th>[Title]</th>\n' +
+        '      </tr>\n' +
+        '    </foot>\n' +
         '    <tbody>\n' +
         '      <tr class="active">\n' +
         '        <td>[active data]</td>\n' +
@@ -1671,6 +1917,54 @@ define(function (require, exports, module) {
         '      </tr>\n' +
         '    </tbody>\n' +
         '  </table>\n';
+
+
+    snippets.bs3tablecontextualtdcoloractive = '        .table tbody tr > td.active {\n' +
+        '            background-color: #ced0cd !important;\n' +
+        '        }\n' +
+        '\n' +
+        '        .table-hover tbody tr:hover > td.active {\n' +
+        '            background-color: #a5a7a5 !important;\n' +
+        '        }\n' +
+        '\n';
+
+    snippets.bs3tablecontextualtdcolorsuccess = '        .table tbody tr > td.success {\n' +
+        '            background-color: #dff0d8 !important;\n' +
+        '        }\n' +
+        '\n' +
+        '        .table-hover tbody tr:hover > td.success {\n' +
+        '            background-color: #d0e9c6 !important;\n' +
+        '        }\n' +
+        '        \n';
+
+    snippets.bs3tablecontextualtdcolordanger = '        .table tbody tr > td.danger {\n' +
+        '            background-color: #f2dede !important;\n' +
+        '        }\n' +
+        '        .table-hover tbody tr:hover > td.danger {\n' +
+        '            background-color: #ebcccc !important;\n' +
+        '        }\n' +
+        '        \n';
+
+    snippets.bs3tablecontextualtdcolorwarning = '        .table tbody tr > td.warning {\n' +
+        '            background-color: #fcf8e3 !important;\n' +
+        '        }\n' +
+        '        .table-hover tbody tr:hover > td.warning {\n' +
+        '            background-color: #faf2cc !important;\n' +
+        '        }\n' +
+        '        \n';
+
+    snippets.bs3tablecontextualtdcolorinfo = '        .table tbody tr > td.info {\n' +
+        '            background-color: #d9edf7 !important;\n' +
+        '        }\n' +
+        '        .table-hover tbody tr:hover > td.info {\n' +
+        '            background-color: #c4e3f3 !important;\n' +
+        '        }\n';
+
+    snippets.bs3tablecontextualtdcolorall = snippets.bs3tablecontextualtdcoloractive +
+        snippets.bs3tablecontextualtdcolorsuccess +
+        snippets.bs3tablecontextualtdcolordanger +
+        snippets.bs3tablecontextualtdcolorwarning +
+        snippets.bs3tablecontextualtdcolorinfo;
 
     // Tabs
 
@@ -1711,7 +2005,7 @@ define(function (require, exports, module) {
         '        <div class="tab-pane" id="tab-4">Content 4</div>\n' +
         '    </div>    \n' +
         '    <!-- Move this line to the last line of js declaration area -->\n' +
-        '    <script src="//cdn.rawgit.com/tonystar/bootstrap-hover-tabs/v3.1.1/bootstrap-hover-tabs.js"></script>\n';
+        '    <script src="https://cdn.rawgit.com/tonystar/bootstrap-hover-tabs/v3.1.1/bootstrap-hover-tabs.js"></script>\n';
     // HTML5 Tamplate
 
     snippets.bs3html5template = '<!DOCTYPE html>\n' +
@@ -1723,7 +2017,7 @@ define(function (require, exports, module) {
         '		<title>Title Page</title>\n' +
         '\n' +
         '		<!-- Bootstrap CSS -->\n' +
-        '		<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">\n' +
+        cdncss +
         '\n' +
         '		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->\n' +
         '		<!-- WARNING: Respond.js doesn t work if you view the page via file:// -->\n' +
@@ -1735,10 +2029,7 @@ define(function (require, exports, module) {
         '	<body>\n' +
         '		<h1 class="text-center">Hello World</h1>\n' +
         '\n' +
-        '		<!-- jQuery -->\n' +
-        '		<script src="//code.jquery.com/jquery.js"></script>\n' +
-        '		<!-- Bootstrap JavaScript -->\n' +
-        '		<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>\n' +
+        cdnjs +
         '	</body>\n' +
         '</html>\n';
 
@@ -2355,6 +2646,558 @@ define(function (require, exports, module) {
     snippets.bs3bootswatchsuperhero = '<link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.5/superhero/bootstrap.min.css" rel="stylesheet" />\n';
     snippets.bs3bootswatchunited = '<link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.5/united/bootstrap.min.css" rel="stylesheet" />\n';
     snippets.bs3bootswatchyeti = '<link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.5/yeti/bootstrap.min.css" rel="stylesheet" />\n';
+
+    // Data Table and Table Smples- datatable.net
+
+
+    snippets.bs3datatableinit = '$(document).ready(function() {\n' +
+        '$(\'#example \').DataTable();\n' +
+        '} );\n';
+
+    snippets.bs3tablesampleheader = '            <thead>\n' +
+        '                <tr>\n' +
+        '                    <th>Name</th>\n' +
+        '                    <th>Position</th>\n' +
+        '                    <th>Office</th>\n' +
+        '                    <th>Age</th>\n' +
+        '                    <th>Start date</th>\n' +
+        '                    <th>Salary</th>\n' +
+        '                </tr>\n' +
+        '            </thead>\n';
+
+    snippets.bs3tablesamplefooter = '            <tfoot>\n' +
+        '                <tr>\n' +
+        '                    <th>Name</th>\n' +
+        '                    <th>Position</th>\n' +
+        '                    <th>Office</th>\n' +
+        '                    <th>Age</th>\n' +
+        '                    <th>Start date</th>\n' +
+        '                    <th>Salary</th>\n' +
+        '                </tr>\n' +
+        '            </tfoot>\n';
+
+    snippets.bs3tablesample = '<table class="table">\n' +
+        '    <thead>\n' +
+        '        <tr>\n' +
+        '            <th>Name</th>\n' +
+        '            <th>Position</th>\n' +
+        '            <th>Office</th>\n' +
+        '            <th>Age</th>\n' +
+        '            <th>Start date</th>\n' +
+        '            <th>Salary</th>\n' +
+        '        </tr>\n' +
+        '    </thead>\n' +
+        '\n' +
+        '    <tfoot>\n' +
+        '        <tr>\n' +
+        '            <th>Name</th>\n' +
+        '            <th>Position</th>\n' +
+        '            <th>Office</th>\n' +
+        '            <th>Age</th>\n' +
+        '            <th>Start date</th>\n' +
+        '            <th>Salary</th>\n' +
+        '        </tr>\n' +
+        '    </tfoot>\n' +
+        '\n' +
+        '    <tbody>\n' +
+        '        \n' +
+        '        [insert data here Ex: bs3tablesamplerows10 .. bs3tablesamplerows50]\n' +
+        '        \n' +
+        '    </tbody>\n' +
+        '</table>\n';
+
+    snippets.bs3tablesamplerows10 = '            <tr>\n' +
+        '                <td>Tiger Nixon</td>\n' +
+        '                <td>System Architect</td>\n' +
+        '                <td>Edinburgh</td>\n' +
+        '                <td>61</td>\n' +
+        '                <td>2011/04/25</td>\n' +
+        '                <td>$320,800</td>\n' +
+        '            </tr>\n' +
+        '            <tr>\n' +
+        '                <td>Garrett Winters</td>\n' +
+        '                <td>Accountant</td>\n' +
+        '                <td>Tokyo</td>\n' +
+        '                <td>63</td>\n' +
+        '                <td>2011/07/25</td>\n' +
+        '                <td>$170,750</td>\n' +
+        '            </tr>\n' +
+        '            <tr>\n' +
+        '                <td>Ashton Cox</td>\n' +
+        '                <td>Junior Technical Author</td>\n' +
+        '                <td>San Francisco</td>\n' +
+        '                <td>66</td>\n' +
+        '                <td>2009/01/12</td>\n' +
+        '                <td>$86,000</td>\n' +
+        '            </tr>\n' +
+        '            <tr>\n' +
+        '                <td>Cedric Kelly</td>\n' +
+        '                <td>Senior Javascript Developer</td>\n' +
+        '                <td>Edinburgh</td>\n' +
+        '                <td>22</td>\n' +
+        '                <td>2012/03/29</td>\n' +
+        '                <td>$433,060</td>\n' +
+        '            </tr>\n' +
+        '            <tr>\n' +
+        '                <td>Airi Satou</td>\n' +
+        '                <td>Accountant</td>\n' +
+        '                <td>Tokyo</td>\n' +
+        '                <td>33</td>\n' +
+        '                <td>2008/11/28</td>\n' +
+        '                <td>$162,700</td>\n' +
+        '            </tr>\n' +
+        '            <tr>\n' +
+        '                <td>Brielle Williamson</td>\n' +
+        '                <td>Integration Specialist</td>\n' +
+        '                <td>New York</td>\n' +
+        '                <td>61</td>\n' +
+        '                <td>2012/12/02</td>\n' +
+        '                <td>$372,000</td>\n' +
+        '            </tr>\n' +
+        '            <tr>\n' +
+        '                <td>Herrod Chandler</td>\n' +
+        '                <td>Sales Assistant</td>\n' +
+        '                <td>San Francisco</td>\n' +
+        '                <td>59</td>\n' +
+        '                <td>2012/08/06</td>\n' +
+        '                <td>$137,500</td>\n' +
+        '            </tr>\n' +
+        '            <tr>\n' +
+        '                <td>Rhona Davidson</td>\n' +
+        '                <td>Integration Specialist</td>\n' +
+        '                <td>Tokyo</td>\n' +
+        '                <td>55</td>\n' +
+        '                <td>2010/10/14</td>\n' +
+        '                <td>$327,900</td>\n' +
+        '            </tr>\n' +
+        '            <tr>\n' +
+        '                <td>Colleen Hurst</td>\n' +
+        '                <td>Javascript Developer</td>\n' +
+        '                <td>San Francisco</td>\n' +
+        '                <td>39</td>\n' +
+        '                <td>2009/09/15</td>\n' +
+        '                <td>$205,500</td>\n' +
+        '            </tr>\n' +
+        '            <tr>\n' +
+        '                <td>Sonya Frost</td>\n' +
+        '                <td>Software Engineer</td>\n' +
+        '                <td>Edinburgh</td>\n' +
+        '                <td>23</td>\n' +
+        '                <td>2008/12/13</td>\n' +
+        '                <td>$103,600</td>\n' +
+        '            </tr>\n';
+
+    snippets.bs3tablesamplerows20 = snippets.bs3tablesamplerows10 + '                <tr>\n' +
+        '                    <td>Jena Gaines</td>\n' +
+        '                    <td>Office Manager</td>\n' +
+        '                    <td>London</td>\n' +
+        '                    <td>30</td>\n' +
+        '                    <td>2008/12/19</td>\n' +
+        '                    <td>$90,560</td>\n' +
+        '                </tr>\n' +
+        '                <tr>\n' +
+        '                    <td>Quinn Flynn</td>\n' +
+        '                    <td>Support Lead</td>\n' +
+        '                    <td>Edinburgh</td>\n' +
+        '                    <td>22</td>\n' +
+        '                    <td>2013/03/03</td>\n' +
+        '                    <td>$342,000</td>\n' +
+        '                </tr>\n' +
+        '                <tr>\n' +
+        '                    <td>Charde Marshall</td>\n' +
+        '                    <td>Regional Director</td>\n' +
+        '                    <td>San Francisco</td>\n' +
+        '                    <td>36</td>\n' +
+        '                    <td>2008/10/16</td>\n' +
+        '                    <td>$470,600</td>\n' +
+        '                </tr>\n' +
+        '                <tr>\n' +
+        '                    <td>Haley Kennedy</td>\n' +
+        '                    <td>Senior Marketing Designer</td>\n' +
+        '                    <td>London</td>\n' +
+        '                    <td>43</td>\n' +
+        '                    <td>2012/12/18</td>\n' +
+        '                    <td>$313,500</td>\n' +
+        '                </tr>\n' +
+        '                <tr>\n' +
+        '                    <td>Tatyana Fitzpatrick</td>\n' +
+        '                    <td>Regional Director</td>\n' +
+        '                    <td>London</td>\n' +
+        '                    <td>19</td>\n' +
+        '                    <td>2010/03/17</td>\n' +
+        '                    <td>$385,750</td>\n' +
+        '                </tr>\n' +
+        '                <tr>\n' +
+        '                    <td>Michael Silva</td>\n' +
+        '                    <td>Marketing Designer</td>\n' +
+        '                    <td>London</td>\n' +
+        '                    <td>66</td>\n' +
+        '                    <td>2012/11/27</td>\n' +
+        '                    <td>$198,500</td>\n' +
+        '                </tr>\n' +
+        '                <tr>\n' +
+        '                    <td>Paul Byrd</td>\n' +
+        '                    <td>Chief Financial Officer (CFO)</td>\n' +
+        '                    <td>New York</td>\n' +
+        '                    <td>64</td>\n' +
+        '                    <td>2010/06/09</td>\n' +
+        '                    <td>$725,000</td>\n' +
+        '                </tr>\n' +
+        '                <tr>\n' +
+        '                    <td>Gloria Little</td>\n' +
+        '                    <td>Systems Administrator</td>\n' +
+        '                    <td>New York</td>\n' +
+        '                    <td>59</td>\n' +
+        '                    <td>2009/04/10</td>\n' +
+        '                    <td>$237,500</td>\n' +
+        '                </tr>\n' +
+        '                <tr>\n' +
+        '                    <td>Bradley Greer</td>\n' +
+        '                    <td>Software Engineer</td>\n' +
+        '                    <td>London</td>\n' +
+        '                    <td>41</td>\n' +
+        '                    <td>2012/10/13</td>\n' +
+        '                    <td>$132,000</td>\n' +
+        '                </tr>\n' +
+        '                <tr>\n' +
+        '                    <td>Dai Rios</td>\n' +
+        '                    <td>Personnel Lead</td>\n' +
+        '                    <td>Edinburgh</td>\n' +
+        '                    <td>35</td>\n' +
+        '                    <td>2012/09/26</td>\n' +
+        '                    <td>$217,500</td>\n' +
+        '                </tr>\n';
+
+    snippets.bs3tablesamplerows30 = snippets.bs3tablesamplerows20 + '                <tr>\n' +
+        '                    <td>Jenette Caldwell</td>\n' +
+        '                    <td>Development Lead</td>\n' +
+        '                    <td>New York</td>\n' +
+        '                    <td>30</td>\n' +
+        '                    <td>2011/09/03</td>\n' +
+        '                    <td>$345,000</td>\n' +
+        '                </tr>\n' +
+        '                <tr>\n' +
+        '                    <td>Yuri Berry</td>\n' +
+        '                    <td>Chief Marketing Officer (CMO)</td>\n' +
+        '                    <td>New York</td>\n' +
+        '                    <td>40</td>\n' +
+        '                    <td>2009/06/25</td>\n' +
+        '                    <td>$675,000</td>\n' +
+        '                </tr>\n' +
+        '                <tr>\n' +
+        '                    <td>Caesar Vance</td>\n' +
+        '                    <td>Pre-Sales Support</td>\n' +
+        '                    <td>New York</td>\n' +
+        '                    <td>21</td>\n' +
+        '                    <td>2011/12/12</td>\n' +
+        '                    <td>$106,450</td>\n' +
+        '                </tr>\n' +
+        '                <tr>\n' +
+        '                    <td>Doris Wilder</td>\n' +
+        '                    <td>Sales Assistant</td>\n' +
+        '                    <td>Sidney</td>\n' +
+        '                    <td>23</td>\n' +
+        '                    <td>2010/09/20</td>\n' +
+        '                    <td>$85,600</td>\n' +
+        '                </tr>\n' +
+        '                <tr>\n' +
+        '                    <td>Angelica Ramos</td>\n' +
+        '                    <td>Chief Executive Officer (CEO)</td>\n' +
+        '                    <td>London</td>\n' +
+        '                    <td>47</td>\n' +
+        '                    <td>2009/10/09</td>\n' +
+        '                    <td>$1,200,000</td>\n' +
+        '                </tr>\n' +
+        '                <tr>\n' +
+        '                    <td>Gavin Joyce</td>\n' +
+        '                    <td>Developer</td>\n' +
+        '                    <td>Edinburgh</td>\n' +
+        '                    <td>42</td>\n' +
+        '                    <td>2010/12/22</td>\n' +
+        '                    <td>$92,575</td>\n' +
+        '                </tr>\n' +
+        '                <tr>\n' +
+        '                    <td>Jennifer Chang</td>\n' +
+        '                    <td>Regional Director</td>\n' +
+        '                    <td>Singapore</td>\n' +
+        '                    <td>28</td>\n' +
+        '                    <td>2010/11/14</td>\n' +
+        '                    <td>$357,650</td>\n' +
+        '                </tr>\n' +
+        '                <tr>\n' +
+        '                    <td>Brenden Wagner</td>\n' +
+        '                    <td>Software Engineer</td>\n' +
+        '                    <td>San Francisco</td>\n' +
+        '                    <td>28</td>\n' +
+        '                    <td>2011/06/07</td>\n' +
+        '                    <td>$206,850</td>\n' +
+        '                </tr>\n' +
+        '                <tr>\n' +
+        '                    <td>Fiona Green</td>\n' +
+        '                    <td>Chief Operating Officer (COO)</td>\n' +
+        '                    <td>San Francisco</td>\n' +
+        '                    <td>48</td>\n' +
+        '                    <td>2010/03/11</td>\n' +
+        '                    <td>$850,000</td>\n' +
+        '                </tr>\n' +
+        '                <tr>\n' +
+        '                    <td>Shou Itou</td>\n' +
+        '                    <td>Regional Marketing</td>\n' +
+        '                    <td>Tokyo</td>\n' +
+        '                    <td>20</td>\n' +
+        '                    <td>2011/08/14</td>\n' +
+        '                    <td>$163,000</td>\n' +
+        '                </tr>\n';
+
+    snippets.bs3tablesamplerows40 = snippets.bs3tablesamplerows30 + '                <tr>\n' +
+        '                    <td>Michelle House</td>\n' +
+        '                    <td>Integration Specialist</td>\n' +
+        '                    <td>Sidney</td>\n' +
+        '                    <td>37</td>\n' +
+        '                    <td>2011/06/02</td>\n' +
+        '                    <td>$95,400</td>\n' +
+        '                </tr>\n' +
+        '                <tr>\n' +
+        '                    <td>Suki Burks</td>\n' +
+        '                    <td>Developer</td>\n' +
+        '                    <td>London</td>\n' +
+        '                    <td>53</td>\n' +
+        '                    <td>2009/10/22</td>\n' +
+        '                    <td>$114,500</td>\n' +
+        '                </tr>\n' +
+        '                <tr>\n' +
+        '                    <td>Prescott Bartlett</td>\n' +
+        '                    <td>Technical Author</td>\n' +
+        '                    <td>London</td>\n' +
+        '                    <td>27</td>\n' +
+        '                    <td>2011/05/07</td>\n' +
+        '                    <td>$145,000</td>\n' +
+        '                </tr>\n' +
+        '                <tr>\n' +
+        '                    <td>Gavin Cortez</td>\n' +
+        '                    <td>Team Leader</td>\n' +
+        '                    <td>San Francisco</td>\n' +
+        '                    <td>22</td>\n' +
+        '                    <td>2008/10/26</td>\n' +
+        '                    <td>$235,500</td>\n' +
+        '                </tr>\n' +
+        '                <tr>\n' +
+        '                    <td>Martena Mccray</td>\n' +
+        '                    <td>Post-Sales support</td>\n' +
+        '                    <td>Edinburgh</td>\n' +
+        '                    <td>46</td>\n' +
+        '                    <td>2011/03/09</td>\n' +
+        '                    <td>$324,050</td>\n' +
+        '                </tr>\n' +
+        '                <tr>\n' +
+        '                    <td>Unity Butler</td>\n' +
+        '                    <td>Marketing Designer</td>\n' +
+        '                    <td>San Francisco</td>\n' +
+        '                    <td>47</td>\n' +
+        '                    <td>2009/12/09</td>\n' +
+        '                    <td>$85,675</td>\n' +
+        '                </tr>\n' +
+        '                <tr>\n' +
+        '                    <td>Howard Hatfield</td>\n' +
+        '                    <td>Office Manager</td>\n' +
+        '                    <td>San Francisco</td>\n' +
+        '                    <td>51</td>\n' +
+        '                    <td>2008/12/16</td>\n' +
+        '                    <td>$164,500</td>\n' +
+        '                </tr>\n' +
+        '                <tr>\n' +
+        '                    <td>Hope Fuentes</td>\n' +
+        '                    <td>Secretary</td>\n' +
+        '                    <td>San Francisco</td>\n' +
+        '                    <td>41</td>\n' +
+        '                    <td>2010/02/12</td>\n' +
+        '                    <td>$109,850</td>\n' +
+        '                </tr>\n' +
+        '                <tr>\n' +
+        '                    <td>Vivian Harrell</td>\n' +
+        '                    <td>Financial Controller</td>\n' +
+        '                    <td>San Francisco</td>\n' +
+        '                    <td>62</td>\n' +
+        '                    <td>2009/02/14</td>\n' +
+        '                    <td>$452,500</td>\n' +
+        '                </tr>\n' +
+        '                <tr>\n' +
+        '                    <td>Timothy Mooney</td>\n' +
+        '                    <td>Office Manager</td>\n' +
+        '                    <td>London</td>\n' +
+        '                    <td>37</td>\n' +
+        '                    <td>2008/12/11</td>\n' +
+        '                    <td>$136,200</td>\n' +
+        '                </tr>\n';
+
+    snippets.bs3tablesamplerows50 = snippets.bs3tablesamplerows40 + '                <tr>\n' +
+        '                    <td>Jackson Bradshaw</td>\n' +
+        '                    <td>Director</td>\n' +
+        '                    <td>New York</td>\n' +
+        '                    <td>65</td>\n' +
+        '                    <td>2008/09/26</td>\n' +
+        '                    <td>$645,750</td>\n' +
+        '                </tr>\n' +
+        '                <tr>\n' +
+        '                    <td>Olivia Liang</td>\n' +
+        '                    <td>Support Engineer</td>\n' +
+        '                    <td>Singapore</td>\n' +
+        '                    <td>64</td>\n' +
+        '                    <td>2011/02/03</td>\n' +
+        '                    <td>$234,500</td>\n' +
+        '                </tr>\n' +
+        '                <tr>\n' +
+        '                    <td>Bruno Nash</td>\n' +
+        '                    <td>Software Engineer</td>\n' +
+        '                    <td>London</td>\n' +
+        '                    <td>38</td>\n' +
+        '                    <td>2011/05/03</td>\n' +
+        '                    <td>$163,500</td>\n' +
+        '                </tr>\n' +
+        '                <tr>\n' +
+        '                    <td>Sakura Yamamoto</td>\n' +
+        '                    <td>Support Engineer</td>\n' +
+        '                    <td>Tokyo</td>\n' +
+        '                    <td>37</td>\n' +
+        '                    <td>2009/08/19</td>\n' +
+        '                    <td>$139,575</td>\n' +
+        '                </tr>\n' +
+        '                <tr>\n' +
+        '                    <td>Thor Walton</td>\n' +
+        '                    <td>Developer</td>\n' +
+        '                    <td>New York</td>\n' +
+        '                    <td>61</td>\n' +
+        '                    <td>2013/08/11</td>\n' +
+        '                    <td>$98,540</td>\n' +
+        '                </tr>\n' +
+        '                <tr>\n' +
+        '                    <td>Finn Camacho</td>\n' +
+        '                    <td>Support Engineer</td>\n' +
+        '                    <td>San Francisco</td>\n' +
+        '                    <td>47</td>\n' +
+        '                    <td>2009/07/07</td>\n' +
+        '                    <td>$87,500</td>\n' +
+        '                </tr>\n' +
+        '                <tr>\n' +
+        '                    <td>Serge Baldwin</td>\n' +
+        '                    <td>Data Coordinator</td>\n' +
+        '                    <td>Singapore</td>\n' +
+        '                    <td>64</td>\n' +
+        '                    <td>2012/04/09</td>\n' +
+        '                    <td>$138,575</td>\n' +
+        '                </tr>\n' +
+        '                <tr>\n' +
+        '                    <td>Zenaida Frank</td>\n' +
+        '                    <td>Software Engineer</td>\n' +
+        '                    <td>New York</td>\n' +
+        '                    <td>63</td>\n' +
+        '                    <td>2010/01/04</td>\n' +
+        '                    <td>$125,250</td>\n' +
+        '                </tr>\n' +
+        '                <tr>\n' +
+        '                    <td>Zorita Serrano</td>\n' +
+        '                    <td>Software Engineer</td>\n' +
+        '                    <td>San Francisco</td>\n' +
+        '                    <td>56</td>\n' +
+        '                    <td>2012/06/01</td>\n' +
+        '                    <td>$115,000</td>\n' +
+        '                </tr>\n' +
+        '                <tr>\n' +
+        '                    <td>Jennifer Acosta</td>\n' +
+        '                    <td>Junior Javascript Developer</td>\n' +
+        '                    <td>Edinburgh</td>\n' +
+        '                    <td>43</td>\n' +
+        '                    <td>2013/02/01</td>\n' +
+        '                    <td>$75,650</td>\n' +
+        '                </tr>\n';
+
+    snippets.bs3datatablesampledata = '<table id="example" class="table table-striped" cellspacing="0" width="100%">\n' +
+        '        <thead>\n' +
+        '            <tr>\n' +
+        '                <th>Name</th>\n' +
+        '                <th>Position</th>\n' +
+        '                <th>Office</th>\n' +
+        '                <th>Age</th>\n' +
+        '                <th>Start date</th>\n' +
+        '                <th>Salary</th>\n' +
+        '            </tr>\n' +
+        '        </thead>\n' +
+        ' \n' +
+        '        <tfoot>\n' +
+        '            <tr>\n' +
+        '                <th>Name</th>\n' +
+        '                <th>Position</th>\n' +
+        '                <th>Office</th>\n' +
+        '                <th>Age</th>\n' +
+        '                <th>Start date</th>\n' +
+        '                <th>Salary</th>\n' +
+        '            </tr>\n' +
+        '        </tfoot>\n' +
+        ' \n' +
+        '        <tbody>\n' +
+        snippets.bs3tablesamplerows50 +
+        '        </tbody>\n' +
+        '    </table>\n';
+
+    snippets.bs3csvimportjs = '       $(document).ready(function() {\n' +
+        '\n' +
+        '            if (isAPIAvailable()) {\n' +
+        '                $(\'#files\').bind(\'change\', handleFileSelect);\n' +
+        '            }\n' +
+        '\n' +
+        '        });\n' +
+        '\n' +
+        '        function isAPIAvailable() {\n' +
+        '            if (window.File && window.FileReader && window.FileList && window.Blob) {\n' +
+        '                return true;\n' +
+        '            } else {\n' +
+        '                document.writeln(\'The HTML5 APIs used in this form are only available in the following browsers:<br />\');\n' +
+        '                document.writeln(\' - Google Chrome: 13.0 or later<br />\');\n' +
+        '                document.writeln(\' - Mozilla Firefox: 6.0 or later<br />\');\n' +
+        '                document.writeln(\' - Internet Explorer: Not supported (partial support expected in 10.0)<br />\');\n' +
+        '                document.writeln(\' - Safari: Not supported<br />\');\n' +
+        '                document.writeln(\' - Opera: Not supported\');\n' +
+        '                return false;\n' +
+        '            }\n' +
+        '        }\n' +
+        '\n' +
+        '        function handleFileSelect(evt) {\n' +
+        '            var files = evt.target.files;\n' +
+        '            var file = files[0];\n' +
+        '            var reader = new FileReader();\n' +
+        '            reader.readAsText(file);\n' +
+        '            reader.onload = function(event) {\n' +
+        '                var csv = event.target.result;\n' +
+        '                var data = $.csv.toArrays(csv);\n' +
+        '                var html = \'<thead>\';\n' +
+        '                var thend = \'</thead>\';\n' +
+        '                var rowtag = \'th\';\n' +
+        '\n' +
+        '                for (var row in data) {\n' +
+        '                    html += \'<tr>\';\n' +
+        '                    for (var item in data[row]) {\n' +
+        '                        html += \'<\' + rowtag + \'>\' + data[row][item] + \'</\' + rowtag + \'>\';\n' +
+        '                    }\n' +
+        '                    html += \'</tr>\';\n' +
+        '                    html += thend;\n' +
+        '                    thend = \'\';\n' +
+        '                    rowtag = \'td\';\n' +
+        '                }\n' +
+        '                $(\'#contents\').html(html);\n' +
+        '                $(\'#contents\').DataTable();\n' +
+        '            };\n' +
+        '            reader.onerror = function() {\n' +
+        '                alert(\'Unable to read \' + file.fileName);\n' +
+        '            };\n' +
+        '        }\n';
+
+    snippets.bs3fileupload = '        <div class="fileinput fileinput-new input-group" data-provides="fileinput">\n' +
+        '            <div class="form-control" data-trigger="fileinput"><i class="glyphicon glyphicon-file fileinput-exists"></i> <span class="fileinput-filename"></span></div>\n' +
+        '            <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span><span class="fileinput-exists">Change</span>\n' +
+        '            <input id="files" type="file" class="file" name="files[]">\n' +
+        '            </span>\n' +
+        '            <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>\n' +
+        '        </div>        \n';
 
     module.exports = snippets;
 });
