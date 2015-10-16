@@ -2,7 +2,7 @@
 
 A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](http://brackets.io/) editor.
 
-![Screenshot](https://raw.githubusercontent.com/acbarbosa1964/acb-bootstrap-snippets/master/sample.gif)
+![Screenshot](https://github.com/acbarbosa1964/acb-sample-gifs/blob/master/images/acb-bootstrap-snippets.gif?raw=true)
 
 ## Install
 
@@ -12,11 +12,13 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
 2. Git clone this repository inside the folder user.
 
 #### Extension Manager
+
 1. Under main menu select **File > Extension Manager...**
 2. Search for "ACB Bootstrap snippets"
 3. Click "Install"
 
 ## How to use
+
 1. **Enable ACB Bootstrap Snippets**<br/>
    Under main menu select **Edit > Enable ACB Bootstrap Snippets**
 2. Starting typing "bs3" you'll see the snippets list (code hint provider), just pick a snippet and press ENTER, or   
@@ -26,8 +28,9 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
 
 ### Bootstrap 3 - Minimum Template
 
-	bs3 - Minimum Bs3 Template
-    bs3template - Minimum Bs3 Template (Same command as bs3)
+	bs3
+    bs3template
+	bs3html 
 
 ### Alerts
 
@@ -605,6 +608,10 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
     bs3bootswatchyeti
 
 To get supplementary files and assets for Animated Portfolio Sample check [Bootstrap Portfolio Project](https://github.com/acbarbosa1964/light-wave-bootstrap-portfolio-sample)
+
+### Notes
+
+** v1.0.11 - Now with 529 bs3 commands!!! (More info check bs-func.txt and snippet.js files)
 
 ### Credits
 ---
