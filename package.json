@@ -1,9 +1,9 @@
 {
     "name": "acb-bootstrap-snippets",
     "title": "ACB Bootstrap Snippets",
-    "description": "A collection of Bootstrap snippets for Brackets. Now with 529 snippets and counting...",
+    "description": "A collection of Bootstrap snippets for Brackets (Now with 529 snippets and counting...)",
     "homepage": "https://github.com/acbarbosa1964/acb-bootstrap-snippets",
-    "version": "0.0.11",
+    "version": "0.0.12",
     "author": "Antonio Carlos Barbosa <acbarbosa@gmail.com> (http://www.goodlearn.org)",
     "license": "MIT",
     "categories": "editing",
