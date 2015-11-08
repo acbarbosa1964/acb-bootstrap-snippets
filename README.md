@@ -611,6 +611,34 @@ http://brackets.dnbard.com/author/Antonio%20Carlos%20Barbosa
     bs3bootswatchunited
     bs3bootswatchyeti
 
+### Bootstrap 3 Media Queries 
+
+## Mobile First Method
+
+bs3mqfmdesktops
+bs3mqfmextrasmalldevices
+bs3mqfmiphoneretina
+bs3mqfmlargedevices
+bs3mqfmmediumdevices
+bs3mqfmphones
+bs3mqfmsmalldevices
+bs3mqfmtablets
+bs3mqfmwidescreen
+    
+## Non-Mobile First Method
+
+bs3mqdesktops
+bs3mqextrasmalldevices
+bs3mqiphoneretina
+bs3mqlargedevices
+bs3mqmediumdevices
+bs3mqphones
+bs3mqsmalldevices
+bs3mqtablets
+bs3mqwidescreens
+
+---
+
 To get supplementary files and assets for Animated Portfolio Sample check [Bootstrap Portfolio Project](https://github.com/acbarbosa1964/light-wave-bootstrap-portfolio-sample)
 
 ### Notes
