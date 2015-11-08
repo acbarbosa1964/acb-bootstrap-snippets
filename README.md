@@ -24,6 +24,10 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
 2. Starting typing "bs3" you'll see the snippets list (code hint provider), just pick a snippet and press ENTER, or   
 3. Enter a snippet and hit the **Tab** key (Alternatively you can also hit the key **DOWN**).
 
+## More extensions?
+
+http://brackets.dnbard.com/author/Antonio%20Carlos%20Barbosa
+
 ## Snippets list
 
 ### Bootstrap 3 - Minimum Template
