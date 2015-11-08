@@ -643,7 +643,7 @@ To get supplementary files and assets for Animated Portfolio Sample check [Boots
 
 ### Notes
 
-** v1.0.11 - Now with 529 bs3 commands!!! (More info check bs-func.txt and snippet.js files)
+** v0.0.13 - Now with 547 bs3 commands and Bootstrap 3 media query default sizes!!! (More info check bs-func.txt and snippet.js files)
 
 ### Credits
 ---
