@@ -3199,5 +3199,31 @@ define(function (require, exports, module) {
         '            <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>\n' +
         '        </div>        \n';
 
+    // Bootstrap 3 Media Queries
+
+    /*==========  Mobile First Method  ==========*/
+
+    snippets.bs3mqfmdesktops = '@media only screen and (min-width : 992px) {\n\n}\n';
+    snippets.bs3mqfmextrasmalldevices = '@media only screen and (min-width : 480px) {\n\n}';
+    snippets.bs3mqfmiphoneretina = '@media only screen and (min-width : 320px) {\n\n}\n';
+    snippets.bs3mqfmlargedevices = '@media only screen and (min-width : 1200px) {\n\n}\n';
+    snippets.bs3mqfmmediumdevices = '@media only screen and (min-width : 992px) {\n\n}\n';
+    snippets.bs3mqfmphones = '@media only screen and (min-width : 480px) {\n\n}';
+    snippets.bs3mqfmsmalldevices = '@media only screen and (min-width : 768px) {\n\n}\n';
+    snippets.bs3mqfmtablets = '@media only screen and (min-width : 768px) {\n\n}\n';
+    snippets.bs3mqfmwidescreen = '@media only screen and (min-width : 1200px) {\n\n}\n';
+
+     /*==========  Non-Mobile First Method  ==========*/
+
+    snippets.bs3mqdesktops = '@media only screen and (max-width : 992px) {\n\n}\n';
+    snippets.bs3mqextrasmalldevices = '@media only screen and (max-width : 480px) {\n\n}\n';
+    snippets.bs3mqiphoneretina = '@media only screen and (max-width : 320px) {\n\n}\n';
+    snippets.bs3mqlargedevices = '@media only screen and (max-width : 1200px) {\n\n}\n';
+    snippets.bs3mqmediumdevices = '@media only screen and (max-width : 992px) {\n\n}\n';
+    snippets.bs3mqphones = '@media only screen and (max-width : 480px) {\n\n}\n';
+    snippets.bs3mqsmalldevices = '@media only screen and (max-width : 768px) {\n\n}\n';
+    snippets.bs3mqtablets = '@media only screen and (max-width : 768px) {\n\n}\n';
+    snippets.bs3mqwidescreens = '@media only screen and (max-width : 1200px) {\n\n}\n';
+
     module.exports = snippets;
 });
