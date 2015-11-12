@@ -33,7 +33,6 @@ define(function (require, exports, module) {
     var cdnjs = '    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>\n' +
         '    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>\n';
 
-
     // Bootstrap 3 - Minimum Template
 
     snippets.bs3html = '<!DOCTYPE html>\n' +
@@ -3213,7 +3212,7 @@ define(function (require, exports, module) {
     snippets.bs3mqfmtablets = '@media only screen and (min-width : 768px) {\n\n}\n';
     snippets.bs3mqfmwidescreen = '@media only screen and (min-width : 1200px) {\n\n}\n';
 
-     /*==========  Non-Mobile First Method  ==========*/
+    /*==========  Non-Mobile First Method  ==========*/
 
     snippets.bs3mqdesktops = '@media only screen and (max-width : 992px) {\n\n}\n';
     snippets.bs3mqextrasmalldevices = '@media only screen and (max-width : 480px) {\n\n}\n';
@@ -3224,6 +3223,536 @@ define(function (require, exports, module) {
     snippets.bs3mqsmalldevices = '@media only screen and (max-width : 768px) {\n\n}\n';
     snippets.bs3mqtablets = '@media only screen and (max-width : 768px) {\n\n}\n';
     snippets.bs3mqwidescreens = '@media only screen and (max-width : 1200px) {\n\n}\n';
+
+    // Ipsum Lorem
+
+    snippets.bs3lorem = '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in aliquet nisl. Praesent sed leo congue, fringilla eros eu, tempus metus. Nam mollis odio ipsum, non vehicula ipsum accumsan sodales. Morbi varius vitae elit euismod cursus. Donec a dapibus justo, in facilisis nisi. Suspendisse ut turpis dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dui risus, tincidunt at odio ut, ultrices dignissim ipsum. Cras ultrices erat nec leo luctus varius. Nulla sollicitudin tincidunt nulla, ut porta mauris volutpat vitae. Suspendisse ornare dolor sit amet massa venenatis pulvinar.</p>\n';
+
+
+    /*============ Jasny Bootstrap ===================*/
+
+    // Jasny Bootstrap
+    //
+    // Bring Bootstrap's components to life with over a dozen custom jQuery plugins. Easily include them all, or one by one.
+    //
+    // Author: Arnold Daniels - arnold@jasny.net
+    // http://www.jasny.net/
+    // Project: https://github.com/jasny/bootstrap
+    //
+
+
+    // Jasny CDN
+    //--------------------------------------------------------------------------
+
+    snippets.bs3jsncdncss = '<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/css/jasny-bootstrap.min.css">\n';
+    snippets.bs3jsncdnjs = '<script src="//cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/js/jasny-bootstrap.min.js"></script>\n';
+
+    // Bootstrap Minimum Jasny Templates
+    //--------------------------------------------------------------------------
+
+    snippets.bs3jsnhtml = "<!DOCTYPE html>\n\n";
+    snippets.bs3jsnhtml += "<html lang=\"en\">\n\n";
+    snippets.bs3jsnhtml += "<head>\n\n";
+    snippets.bs3jsnhtml += "    <meta charset=\"utf-8\">\n\n";
+    snippets.bs3jsnhtml += "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n\n";
+    snippets.bs3jsnhtml += "    <meta name=\"description\" content=\"\">\n\n";
+    snippets.bs3jsnhtml += "    <meta name=\"author\" content=\"\">\n\n";
+    snippets.bs3jsnhtml += "\n\n";
+    snippets.bs3jsnhtml += "    <title>Bootstrap Jasny Minimum HTML Template<\/title>\n\n";
+    snippets.bs3jsnhtml += "\n\n";
+    snippets.bs3jsnhtml += "    <link rel=\"stylesheet\" media=\"screen\" href=\"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/twitter-bootstrap\/3.3.5\/css\/bootstrap.min.css\">\n\n";
+    snippets.bs3jsnhtml += "    <link rel=\"stylesheet\" href=\"http:\/\/www.jasny.net\/bootstrap\/dist\/css\/jasny-bootstrap.min.css\">\n\n";
+    snippets.bs3jsnhtml += "    <!--link rel=\"stylesheet\" href=\"http:\/\/www.jasny.net\/bootstrap\/examples\/navmenu-reveal\/navmenu-reveal.css\"-->\n\n";
+    snippets.bs3jsnhtml += "\n\n";
+    snippets.bs3jsnhtml += "\n\n";
+    snippets.bs3jsnhtml += "    <style>\n\n";
+    snippets.bs3jsnhtml += "    <\/style>\n\n";
+    snippets.bs3jsnhtml += "\n\n";
+    snippets.bs3jsnhtml += "    <!-- Just for debugging purposes. Don't actually copy this line! -->\n\n";
+    snippets.bs3jsnhtml += "    <!--[if lt IE 9]><script src=\"..\/..\/docs-assets\/js\/ie8-responsive-file-warning.js\"><\/script><![endif]-->\n\n";
+    snippets.bs3jsnhtml += "\n\n";
+    snippets.bs3jsnhtml += "    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->\n\n";
+    snippets.bs3jsnhtml += "    <!--[if lt IE 9]>\n\n";
+    snippets.bs3jsnhtml += "      <script src=\"https:\/\/oss.maxcdn.com\/libs\/html5shiv\/3.7.0\/html5shiv.js\"><\/script>\n\n";
+    snippets.bs3jsnhtml += "      <script src=\"https:\/\/oss.maxcdn.com\/libs\/respond.js\/1.4.2\/respond.min.js\"><\/script>\n\n";
+    snippets.bs3jsnhtml += "    <![endif]-->\n\n";
+    snippets.bs3jsnhtml += "    \n\n";
+    snippets.bs3jsnhtml += "<\/head>\n\n";
+    snippets.bs3jsnhtml += "<body>\n\n";
+    snippets.bs3jsnhtml += "\n\n";
+    snippets.bs3jsnhtml += "\n\n";
+    snippets.bs3jsnhtml += "\n\n";
+    snippets.bs3jsnhtml += "    <script src=\"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/jquery\/1.11.3\/jquery.min.js\"><\/script>\n\n";
+    snippets.bs3jsnhtml += "    <script src=\"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/twitter-bootstrap\/3.3.5\/js\/bootstrap.min.js\"><\/script>\n\n";
+    snippets.bs3jsnhtml += "    <script src=\"http:\/\/www.jasny.net\/bootstrap\/dist\/js\/jasny-bootstrap.min.js\"><\/script>\n\n";
+    snippets.bs3jsnhtml += "    \n\n";
+    snippets.bs3jsnhtml += "<\/body>\n\n";
+    snippets.bs3jsnhtml += "<\/html>\n\n";
+
+
+    snippets.bs3jsnhtmlnavbar = "<!DOCTYPE html>\n";
+    snippets.bs3jsnhtmlnavbar += "<html lang=\"en\">\n";
+    snippets.bs3jsnhtmlnavbar += "\n";
+    snippets.bs3jsnhtmlnavbar += "<head>\n";
+    snippets.bs3jsnhtmlnavbar += "    <meta charset=\"utf-8\">\n";
+    snippets.bs3jsnhtmlnavbar += "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n";
+    snippets.bs3jsnhtmlnavbar += "    <meta name=\"description\" content=\"\">\n";
+    snippets.bs3jsnhtmlnavbar += "    <meta name=\"author\" content=\"\">\n";
+    snippets.bs3jsnhtmlnavbar += "\n";
+    snippets.bs3jsnhtmlnavbar += "    <title>Bootstrap Jasny Minimum HTML Template<\/title>\n";
+    snippets.bs3jsnhtmlnavbar += "\n";
+    snippets.bs3jsnhtmlnavbar += "    <link rel=\"stylesheet\" media=\"screen\" href=\"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/twitter-bootstrap\/3.3.5\/css\/bootstrap.min.css\">\n";
+    snippets.bs3jsnhtmlnavbar += "    <link rel=\"stylesheet\" href=\"http:\/\/www.jasny.net\/bootstrap\/dist\/css\/jasny-bootstrap.min.css\">\n";
+    snippets.bs3jsnhtmlnavbar += "\n";
+    snippets.bs3jsnhtmlnavbar += "\n";
+    snippets.bs3jsnhtmlnavbar += "    <!--link rel=\"stylesheet\" href=\"http:\/\/www.jasny.net\/bootstrap\/examples\/navmenu-reveal\/navmenu-reveal.css\"-->\n";
+    snippets.bs3jsnhtmlnavbar += "    <!--link rel=\"stylesheet\" href=\"http:\/\/www.jasny.net\/bootstrap\/examples\/navmenu-push\/navmenu-push.css\"-->\n";
+    snippets.bs3jsnhtmlnavbar += "    <!--link rel=\"stylesheet\" href=\"http:\/\/www.jasny.net\/bootstrap\/examples\/navmenu\/navmenu.css\"-->\n";
+    snippets.bs3jsnhtmlnavbar += "\n";
+    snippets.bs3jsnhtmlnavbar += "    <style>\n";
+    snippets.bs3jsnhtmlnavbar += "        body {\n";
+    snippets.bs3jsnhtmlnavbar += "            padding-top: 50px;\n";
+    snippets.bs3jsnhtmlnavbar += "        }\n";
+    snippets.bs3jsnhtmlnavbar += "        \n";
+    snippets.bs3jsnhtmlnavbar += "        .starter-template {\n";
+    snippets.bs3jsnhtmlnavbar += "            padding: 40px 15px;\n";
+    snippets.bs3jsnhtmlnavbar += "            text-align: center;\n";
+    snippets.bs3jsnhtmlnavbar += "        }\n";
+    snippets.bs3jsnhtmlnavbar += "    <\/style>\n";
+    snippets.bs3jsnhtmlnavbar += "\n";
+    snippets.bs3jsnhtmlnavbar += "    <!-- Just for debugging purposes. Don't actually copy this line! -->\n";
+    snippets.bs3jsnhtmlnavbar += "    <!--[if lt IE 9]><script src=\"..\/..\/docs-assets\/js\/ie8-responsive-file-warning.js\"><\/script><![endif]-->\n";
+    snippets.bs3jsnhtmlnavbar += "\n";
+    snippets.bs3jsnhtmlnavbar += "    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->\n";
+    snippets.bs3jsnhtmlnavbar += "    <!--[if lt IE 9]>\n";
+    snippets.bs3jsnhtmlnavbar += "      <script src=\"https:\/\/oss.maxcdn.com\/libs\/html5shiv\/3.7.0\/html5shiv.js\"><\/script>\n";
+    snippets.bs3jsnhtmlnavbar += "      <script src=\"https:\/\/oss.maxcdn.com\/libs\/respond.js\/1.4.2\/respond.min.js\"><\/script>\n";
+    snippets.bs3jsnhtmlnavbar += "    <![endif]-->\n";
+    snippets.bs3jsnhtmlnavbar += "\n";
+    snippets.bs3jsnhtmlnavbar += "<\/head>\n";
+    snippets.bs3jsnhtmlnavbar += "\n";
+    snippets.bs3jsnhtmlnavbar += "<body>\n";
+    snippets.bs3jsnhtmlnavbar += "\n";
+    snippets.bs3jsnhtmlnavbar += "    <div class=\"navbar navbar-inverse navbar-fixed-top\">\n";
+    snippets.bs3jsnhtmlnavbar += "        <div class=\"container\">\n";
+    snippets.bs3jsnhtmlnavbar += "            <div class=\"navbar-header\">\n";
+    snippets.bs3jsnhtmlnavbar += "                <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\".navbar-collapse\">\n";
+    snippets.bs3jsnhtmlnavbar += "                    <span class=\"icon-bar\"><\/span>\n";
+    snippets.bs3jsnhtmlnavbar += "                    <span class=\"icon-bar\"><\/span>\n";
+    snippets.bs3jsnhtmlnavbar += "                    <span class=\"icon-bar\"><\/span>\n";
+    snippets.bs3jsnhtmlnavbar += "                <\/button>\n";
+    snippets.bs3jsnhtmlnavbar += "                <a class=\"navbar-brand\" href=\"#\">Project name<\/a>\n";
+    snippets.bs3jsnhtmlnavbar += "            <\/div>\n";
+    snippets.bs3jsnhtmlnavbar += "            <div class=\"collapse navbar-collapse\">\n";
+    snippets.bs3jsnhtmlnavbar += "                <ul class=\"nav navbar-nav\">\n";
+    snippets.bs3jsnhtmlnavbar += "                    <li class=\"active\"><a href=\"#\">Home<\/a><\/li>\n";
+    snippets.bs3jsnhtmlnavbar += "                    <li><a href=\"#about\">About<\/a><\/li>\n";
+    snippets.bs3jsnhtmlnavbar += "                    <li><a href=\"#contact\">Contact<\/a><\/li>\n";
+    snippets.bs3jsnhtmlnavbar += "                <\/ul>\n";
+    snippets.bs3jsnhtmlnavbar += "            <\/div>\n";
+    snippets.bs3jsnhtmlnavbar += "            <!--\/.nav-collapse -->\n";
+    snippets.bs3jsnhtmlnavbar += "        <\/div>\n";
+    snippets.bs3jsnhtmlnavbar += "    <\/div>\n";
+    snippets.bs3jsnhtmlnavbar += "\n";
+    snippets.bs3jsnhtmlnavbar += "    <div class=\"container\">\n";
+    snippets.bs3jsnhtmlnavbar += "\n";
+    snippets.bs3jsnhtmlnavbar += "        <div class=\"starter-template\">\n";
+    snippets.bs3jsnhtmlnavbar += "            <h1>Bootstrap starter template<\/h1>\n";
+    snippets.bs3jsnhtmlnavbar += "            <p class=\"lead\">Use this document as a way to quickly start any new project.\n";
+    snippets.bs3jsnhtmlnavbar += "                <br> All you get is this text and a mostly barebones HTML document.<\/p>\n";
+    snippets.bs3jsnhtmlnavbar += "        <\/div>\n";
+    snippets.bs3jsnhtmlnavbar += "\n";
+    snippets.bs3jsnhtmlnavbar += "    <\/div>\n";
+    snippets.bs3jsnhtmlnavbar += "\n";
+    snippets.bs3jsnhtmlnavbar += "    <script src=\"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/jquery\/1.11.3\/jquery.min.js\"><\/script>\n";
+    snippets.bs3jsnhtmlnavbar += "    <script src=\"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/twitter-bootstrap\/3.3.5\/js\/bootstrap.min.js\"><\/script>\n";
+    snippets.bs3jsnhtmlnavbar += "    <script src=\"http:\/\/www.jasny.net\/bootstrap\/dist\/js\/jasny-bootstrap.min.js\"><\/script>\n";
+    snippets.bs3jsnhtmlnavbar += "\n";
+    snippets.bs3jsnhtmlnavbar += "<\/body>\n";
+    snippets.bs3jsnhtmlnavbar += "\n";
+    snippets.bs3jsnhtmlnavbar += "<\/html>\n";
+
+
+    snippets.bs3jsnhtmlnavbaroffcanvas = "<!DOCTYPE html>\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "<html lang=\"en\">\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "<head>\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "    <meta charset=\"utf-8\">\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "    <meta name=\"description\" content=\"\">\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "    <meta name=\"author\" content=\"\">\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "    <title>Bootstrap Jasny Minimum HTML Template<\/title>\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "    <link rel=\"stylesheet\" media=\"screen\" href=\"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/twitter-bootstrap\/3.3.5\/css\/bootstrap.min.css\">\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "    <link rel=\"stylesheet\" href=\"http:\/\/www.jasny.net\/bootstrap\/dist\/css\/jasny-bootstrap.min.css\">\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "    <!--link rel=\"stylesheet\" href=\"http:\/\/www.jasny.net\/bootstrap\/examples\/navmenu-reveal\/navmenu-reveal.css\"-->\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "    <!--link rel=\"stylesheet\" href=\"http:\/\/www.jasny.net\/bootstrap\/examples\/navmenu-push\/navmenu-push.css\"-->\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "    <!--link rel=\"stylesheet\" href=\"http:\/\/www.jasny.net\/bootstrap\/examples\/navmenu\/navmenu.css\"-->\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "    <style>\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "        body {\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "            padding-top: 80px;\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "            padding-bottom: 20px;\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "        }\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "        \n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "        @media (min-width: 992px) {\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "            .navbar {\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "                padding-right: 15px;\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "            }\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "        }\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "    <\/style>\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "    <!-- Just for debugging purposes. Don't actually copy this line! -->\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "    <!--[if lt IE 9]><script src=\"..\/..\/docs-assets\/js\/ie8-responsive-file-warning.js\"><\/script><![endif]-->\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "    <!--[if lt IE 9]>\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "      <script src=\"https:\/\/oss.maxcdn.com\/libs\/html5shiv\/3.7.0\/html5shiv.js\"><\/script>\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "      <script src=\"https:\/\/oss.maxcdn.com\/libs\/respond.js\/1.4.2\/respond.min.js\"><\/script>\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "    <![endif]-->\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "<\/head>\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "<body>\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "    <div class=\"container\">\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "        <div class=\"navbar navbar-fixed-top navbar-default\">\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "            <div class=\"navbar-header\">\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "                <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"offcanvas\" data-target=\".navbar-offcanvas\" data-canvas=\"body\">\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "                    <span class=\"icon-bar\"><\/span>\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "                    <span class=\"icon-bar\"><\/span>\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "                    <span class=\"icon-bar\"><\/span>\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "                <\/button>\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "                <a class=\"navbar-brand\" href=\"#\">Project name<\/a>\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "            <\/div>\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "            <div class=\"navbar-offcanvas offcanvas\">\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "                <a class=\"navmenu-brand\" href=\"#\">Project name<\/a>\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "                <ul class=\"nav navbar-nav\">\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "                    <li><a href=\"#\">Home<\/a><\/li>\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "                    <li><a href=\"#\">Projects<\/a><\/li>\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "                    <li><a href=\"#\">Portfolio<\/a><\/li>\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "                    <li class=\"active\"><a href=\"#\">Our Team<\/a><\/li>\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "                    <li class=\"dropdown\">\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "                        <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">More... <b class=\"caret\"><\/b><\/a>\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "                        <ul class=\"dropdown-menu\">\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "                            <li><a href=\"#\">Action<\/a><\/li>\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "                            <li><a href=\"#\">Another action<\/a><\/li>\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "                            <li><a href=\"#\">Something else here<\/a><\/li>\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "                            <li class=\"divider\"><\/li>\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "                            <li class=\"dropdown-header\">Nav header<\/li>\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "                            <li><a href=\"#\">Separated link<\/a><\/li>\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "                            <li><a href=\"#\">One more separated link<\/a><\/li>\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "                        <\/ul>\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "                    <\/li>\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "                <\/ul>\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "            <\/div>\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "        <\/div>\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "        <!-- Main component for a primary marketing message or call to action -->\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "        <div class=\"jumbotron\">\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "            <h1>Offcanvas Navbar example<\/h1>\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "            <p>This example demonstrates using the offcanvas plugin with the navbar.<\/p>\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "        <\/div>\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "        <p>\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "            By default the navbar is show on the right side of the screen. You can show it on the left side instead by adding <code>.navmenu-fixed-left<\/code> to the <code>.navbar-offcanvas<\/code>.\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "        <\/p>\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "    <\/div>\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "    <script src=\"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/jquery\/1.11.3\/jquery.min.js\"><\/script>\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "    <script src=\"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/twitter-bootstrap\/3.3.5\/js\/bootstrap.min.js\"><\/script>\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "    <script src=\"http:\/\/www.jasny.net\/bootstrap\/dist\/js\/jasny-bootstrap.min.js\"><\/script>\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "<\/body>\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "\n";
+    snippets.bs3jsnhtmlnavbaroffcanvas += "<\/html>\n";
+
+
+    // Container
+    //-------------------------------------------------------------------------------------
+
+    // Added .container-smooth a container to use the same max-width for all viewport sizes. This means that the container size won't jump at media query breakpoints.
+    snippets.bs3jsncontainer = '<div class="container container-smooth">\n\n</div>\n\n\n';
+
+    // Buttons
+    //-------------------------------------------------------------------------------------
+
+    // Standard button with label
+    snippets.bs3jsnbtnleft = '<button type="button" class="btn btn-labeled btn-default"><span class="btn-label"><i class="glyphicon glyphicon-arrow-left"></i></span>Left</button>\n';
+
+    // Standard button with label on the right side
+    snippets.bs3jsnbtnright = '<button type="button" class="btn btn-labeled btn-default">Right<span class="btn-label btn-label-right"><i class="glyphicon glyphicon-arrow-right"></i></span></button>\n';
+
+    // Success button with label
+    snippets.bs3jsnbtnsuccess = '<button type="button" class="btn btn-labeled btn-success"><span class="btn-label"><i class="glyphicon glyphicon-ok"></i></span>Success</button>\n';
+
+    // Danger button with label
+    snippets.bs3jsnbtndanger = '<button type="button" class="btn btn-labeled btn-danger"><span class="btn-label"><i class="glyphicon glyphicon-remove"></i></span>Danger</button>\n';
+
+
+    // Navmenu
+    //--------------------------------------------------------------------------------------
+
+
+    // Body padding required
+    // The fixed navmenu will overlay your other content, unless you add padding to the left or right of the <body>. Try out your own values or use our snippet below. Tip: By default, the navmenu is 300px wide.
+    //
+    // @media (min-width: 992px) {
+    //   body {
+    //     padding-left: 300px;
+    //  }
+    // }
+    snippets.bs3jsnnavmenumediaquery = "@media (min-width: 992px) {\n";
+    snippets.bs3jsnnavmenumediaquery += "  body {\n";
+    snippets.bs3jsnnavmenumediaquery += "    padding-left: 300px;\n";
+    snippets.bs3jsnnavmenumediaquery += "  }\n";
+    snippets.bs3jsnnavmenumediaquery += "}\n";
+
+    // Default
+
+    snippets.bs3jsnnavmenu = "<nav class=\"navmenu navmenu-default\" role=\"navigation\">\n\n";
+    snippets.bs3jsnnavmenu += "  <a class=\"navmenu-brand\" href=\"#\">Brand<\/a>\n\n";
+    snippets.bs3jsnnavmenu += "\n\n";
+    snippets.bs3jsnnavmenu += "  <ul class=\"nav navmenu-nav\">\n\n";
+    snippets.bs3jsnnavmenu += "    <li class=\"active\"><a href=\"#\">Link<\/a><\/li>\n\n";
+    snippets.bs3jsnnavmenu += "    <li><a href=\"#\">Link<\/a><\/li>\n\n";
+    snippets.bs3jsnnavmenu += "    <li class=\"dropdown\">\n\n";
+    snippets.bs3jsnnavmenu += "      <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">Dropdown <b class=\"caret\"><\/b><\/a>\n\n";
+    snippets.bs3jsnnavmenu += "      <ul class=\"dropdown-menu navmenu-nav\" role=\"menu\">\n\n";
+    snippets.bs3jsnnavmenu += "        <li><a href=\"#\">Action<\/a><\/li>\n\n";
+    snippets.bs3jsnnavmenu += "        <li><a href=\"#\">Another action<\/a><\/li>\n\n";
+    snippets.bs3jsnnavmenu += "        <li><a href=\"#\">Something else here<\/a><\/li>\n\n";
+    snippets.bs3jsnnavmenu += "        <li><a href=\"#\">Separated link<\/a><\/li>\n\n";
+    snippets.bs3jsnnavmenu += "        <li><a href=\"#\">One more separated link<\/a><\/li>\n\n";
+    snippets.bs3jsnnavmenu += "      <\/ul>\n\n";
+    snippets.bs3jsnnavmenu += "    <\/li>\n\n";
+    snippets.bs3jsnnavmenu += "  <\/ul>\n\n";
+    snippets.bs3jsnnavmenu += "<\/nav>\n\n";
+
+
+    // navmenu BODY
+    var navmenubody = "        <a class=\"navmenu-brand visible-md visible-lg\" href=\"#\">Project name<\/a>\n";
+    navmenubody += "        <ul class=\"nav navmenu-nav\">\n";
+    navmenubody += "            <li class=\"active\"><a href=\"#\">Home<\/a><\/li>\n";
+    navmenubody += "            <li><a href=\"#\">Components<\/a><\/li>\n";
+    navmenubody += "            <li><a href=\"#\">Programming<\/a><\/li>\n";
+    navmenubody += "            <li><a href=\"#\">Tutorials<\/a><\/li>\n";
+    navmenubody += "        <\/ul>\n";
+    navmenubody += "        <ul class=\"nav navmenu-nav\">\n";
+    navmenubody += "            <li><a href=\"#\">Link<\/a><\/li>\n";
+    navmenubody += "            <li><a href=\"#\">Link<\/a><\/li>\n";
+    navmenubody += "            <li><a href=\"#\">Link<\/a><\/li>\n";
+    navmenubody += "            <li class=\"dropdown\">\n";
+    navmenubody += "                <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">Dropdown <b class=\"caret\"><\/b><\/a>\n";
+    navmenubody += "                <ul class=\"dropdown-menu navmenu-nav\">\n";
+    navmenubody += "                    <li><a href=\"#\">Action<\/a><\/li>\n";
+    navmenubody += "                    <li><a href=\"#\">Another action<\/a><\/li>\n";
+    navmenubody += "                    <li><a href=\"#\">Something else here<\/a><\/li>\n";
+    navmenubody += "                    <li class=\"divider\"><\/li>\n";
+    navmenubody += "                    <li class=\"dropdown-header\">Nav header<\/li>\n";
+    navmenubody += "                    <li><a href=\"#\">Separated link<\/a><\/li>\n";
+    navmenubody += "                    <li><a href=\"#\">One more separated link<\/a><\/li>\n";
+    navmenubody += "                <\/ul>\n";
+    navmenubody += "            <\/li>\n";
+    navmenubody += "        <\/ul>\n";
+    navmenubody += "    <\/div>\n";
+    navmenubody += "\n";
+    navmenubody += "    <div class=\"navbar navbar-default navbar-fixed-top hidden-md hidden-lg\">\n";
+    navmenubody += "        <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"offcanvas\" data-target=\".navmenu\">\n";
+    navmenubody += "            <span class=\"icon-bar\"><\/span>\n";
+    navmenubody += "            <span class=\"icon-bar\"><\/span>\n";
+    navmenubody += "            <span class=\"icon-bar\"><\/span>\n";
+    navmenubody += "        <\/button>\n";
+    navmenubody += "        <a class=\"navbar-brand\" href=\"#\">Project name<\/a>\n";
+    navmenubody += "    <\/div>\n";
+    navmenubody += "\n";
+    navmenubody += "    <div class=\"container\">\n";
+    navmenubody += "        <div class=\"page-header\">\n";
+    navmenubody += "            <h1>Navmenu Template<\/h1>\n";
+    navmenubody += "        <\/div>\n";
+    navmenubody += "        <p class=\"lead\">This example shows the navmenu element. If the viewport is <b>less than 992px<\/b> the menu will be placed the off canvas and will be shown with a slide in effect.<\/p>\n";
+    navmenubody += "        <p>Also take a look at the examples for a navmenu with <a href=\"..\/navmenu-push\">push effect<\/a> and <a href=\"..\/navmenu-reveal\">reveal effect<\/a>.<\/p>\n";
+    navmenubody += "    <\/div>\n";
+    navmenubody += "\n";
+
+    var navmenuoffcanvas = "        <a class=\"navmenu-brand\" href=\"#\">Project name<\/a>\n\n";
+    navmenuoffcanvas += "        <ul class=\"nav navmenu-nav\">\n\n";
+    navmenuoffcanvas += "            <li><a href=\"#\">Home<\/a><\/li>\n\n";
+    navmenuoffcanvas += "            <li><a href=\"#\">Components<\/a><\/li>\n\n";
+    navmenuoffcanvas += "            <li class=\"active\"><a href=\"#\">Programming<\/a><\/li>\n\n";
+    navmenuoffcanvas += "            <li><a href=\"#\">Tutorials<\/a><\/li>\n\n";
+    navmenuoffcanvas += "        <\/ul>\n\n";
+    navmenuoffcanvas += "        <ul class=\"nav navmenu-nav\">\n\n";
+    navmenuoffcanvas += "            <li><a href=\"#\">Link<\/a><\/li>\n\n";
+    navmenuoffcanvas += "            <li><a href=\"#\">Link<\/a><\/li>\n\n";
+    navmenuoffcanvas += "            <li><a href=\"#\">Link<\/a><\/li>\n\n";
+    navmenuoffcanvas += "            <li class=\"dropdown\">\n\n";
+    navmenuoffcanvas += "                <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">Dropdown <b class=\"caret\"><\/b><\/a>\n\n";
+    navmenuoffcanvas += "                <ul class=\"dropdown-menu navmenu-nav\">\n\n";
+    navmenuoffcanvas += "                    <li><a href=\"#\">Action<\/a><\/li>\n\n";
+    navmenuoffcanvas += "                    <li><a href=\"#\">Another action<\/a><\/li>\n\n";
+    navmenuoffcanvas += "                    <li><a href=\"#\">Something else here<\/a><\/li>\n\n";
+    navmenuoffcanvas += "                    <li class=\"divider\"><\/li>\n\n";
+    navmenuoffcanvas += "                    <li class=\"dropdown-header\">Nav header<\/li>\n\n";
+    navmenuoffcanvas += "                    <li><a href=\"#\">Separated link<\/a><\/li>\n\n";
+    navmenuoffcanvas += "                    <li><a href=\"#\">One more separated link<\/a><\/li>\n\n";
+    navmenuoffcanvas += "                <\/ul>\n\n";
+    navmenuoffcanvas += "            <\/li>\n\n";
+    navmenuoffcanvas += "        <\/ul>\n\n";
+    navmenuoffcanvas += "    <\/div>\n\n";
+    navmenuoffcanvas += "    <div class=\"canvas\">\n\n";
+    navmenuoffcanvas += "        <div class=\"navbar navbar-default navbar-fixed-top\">\n\n";
+    navmenuoffcanvas += "            <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"offcanvas\" data-recalc=\"false\" data-target=\".navmenu\" data-canvas=\".canvas\">\n\n";
+    navmenuoffcanvas += "                <span class=\"icon-bar\"><\/span>\n\n";
+    navmenuoffcanvas += "                <span class=\"icon-bar\"><\/span>\n\n";
+    navmenuoffcanvas += "                <span class=\"icon-bar\"><\/span>\n\n";
+    navmenuoffcanvas += "            <\/button>\n\n";
+    navmenuoffcanvas += "        <\/div>\n\n";
+    navmenuoffcanvas += "\n\n";
+    navmenuoffcanvas += "        <div class=\"container\">\n\n";
+    navmenuoffcanvas += "            <div class=\"page-header\">\n\n";
+    navmenuoffcanvas += "                <h1>Off Canvas Reveal Menu Template<\/h1>\n\n";
+    navmenuoffcanvas += "            <\/div>\n\n";
+    navmenuoffcanvas += "            <p class=\"lead\">This example demonstrates the use of the offcanvas plugin with a reveal effect.<\/p>\n\n";
+    navmenuoffcanvas += "            <p>On the contrary of the push effect, the menu doesn't move with the canvas.<\/p>\n\n";
+    navmenuoffcanvas += "            <p>You get the reveal effect by wrapping the content in a div and setting the <code>canvas<\/code> option to target that div.<\/p>\n\n";
+    navmenuoffcanvas += "            <p>Note that in this example, the navmenu doesn't have the <code>offcanvas<\/code> class, but is placed under the canvas by setting the <code>z-index<\/code>.<\/p>\n\n";
+    navmenuoffcanvas += "            <p>Also take a look at the examples for a navmenu with <a href=\"..\/navmenu\">slide in effect<\/a> and <a href=\"..\/navmenu-push\">push effect<\/a>.<\/p>\n\n";
+    navmenuoffcanvas += "        <\/div>\n\n";
+    navmenuoffcanvas += "\n\n";
+
+    // Fixed to left or right
+    // Add either .navmenu-fixed-left or .navmenu-fixed-right.
+
+    snippets.bs3jsnnavmenufixedleft = "    <div class=\"navmenu navmenu-default navmenu-fixed-left offcanvas-sm\">" + navmenubody;
+    snippets.bs3jsnnavmenufixedright = "    <div class=\"navmenu navmenu-default navmenu-fixed-right offcanvas-sm\">" + navmenubody;
+    snippets.bs3jsnnavmenuoffcanvasreveal = "    <div class=\"navmenu navmenu-default navmenu-fixed-left\">\n" + navmenuoffcanvas;
+    snippets.bs3jsnnavmenuoffcanvaspush = "    <div class=\"navmenu navmenu-default navmenu-fixed-left offcanvas\">" + navmenuoffcanvas;
+
+    // Alerts
+    // --------------------------------------------------------------------------------------------
+
+    // Fixed to top / bottom
+    // Add .alert-fixed-top top stick the alert on top of your page. Use .alert-fixed-bottom for the bottom.
+
+    var alertbody = '\n<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>\n' +
+        '<strong>ALERT! </strong>Your text comes here\n' +
+        '</div>\n\n';
+
+    snippets.bs3jsnalerttop = '<div class="alert alert-fixed-top">' + alertbody;
+    snippets.bs3jsnalertbottom = '<div class="alert alert-fixed-bottom">' + alertbody;
+
+    snippets.bs3jsnalertdangertop = '<div class="alert alert-danger alert-fixed-top">' + alertbody;
+    snippets.bs3jsnalertdangerbottom = '<div class="alert alert-danger alert-fixed-bottom">' + alertbody;
+
+    snippets.bs3jsnalertwarningtop = '<div class="alert alert-warning alert-fixed-top">' + alertbody;
+    snippets.bs3jsnalertwarningbottom = '<div class="alert alert-warning alert-fixed-bottom">' + alertbody;
+
+    snippets.bs3jsnalertinfotop = '<div class="alert alert-info alert-fixed-top">' + alertbody;
+    snippets.bs3jsnalertinfobottom = '<div class="alert alert-info alert-fixed-bottom">' + alertbody;
+
+    snippets.bs3jsnalertsuccesstop = '<div class="alert alert-success alert-fixed-top">' + alertbody;
+    snippets.bs3jsnalertsuccessbottom = '<div class="alert alert-success alert-fixed-bottom">' + alertbody;
+
+    // Table - ROWLINK
+
+    snippets.bs3jsntablerowlink = "    <div class=\"container\">\n";
+    snippets.bs3jsntablerowlink += "        <table class=\"table table-striped table-bordered table-hover\">\n";
+    snippets.bs3jsntablerowlink += "            <thead>\n";
+    snippets.bs3jsntablerowlink += "                <tr>\n";
+    snippets.bs3jsntablerowlink += "                    <th>Name<\/th>\n";
+    snippets.bs3jsntablerowlink += "                    <th>Company<\/th>\n";
+    snippets.bs3jsntablerowlink += "                    <th>Email<\/th>\n";
+    snippets.bs3jsntablerowlink += "                    <th>URL<\/th>\n";
+    snippets.bs3jsntablerowlink += "                <\/tr>\n";
+    snippets.bs3jsntablerowlink += "            <\/thead>\n";
+    snippets.bs3jsntablerowlink += "            <tbody data-link=\"row\" class=\"rowlink\">\n";
+    snippets.bs3jsntablerowlink += "                <tr>\n";
+    snippets.bs3jsntablerowlink += "                    <td><a href=\"#inputmask\">Carson<\/a><\/td>\n";
+    snippets.bs3jsntablerowlink += "                    <td>Magnis Dis Parturient Ltd<\/td>\n";
+    snippets.bs3jsntablerowlink += "                    <td>magna@elementumategestas.edu<\/td>\n";
+    snippets.bs3jsntablerowlink += "                    <td class=\"rowlink-skip\"><a href=\"#\">elementumategestas.edu<\/a><\/td>\n";
+    snippets.bs3jsntablerowlink += "                <\/tr>\n";
+    snippets.bs3jsntablerowlink += "                <tr>\n";
+    snippets.bs3jsntablerowlink += "                    <td><a href=\"#inputmask\">Salvador<\/a><\/td>\n";
+    snippets.bs3jsntablerowlink += "                    <td>Orci Corp.<\/td>\n";
+    snippets.bs3jsntablerowlink += "                    <td>elit.Nulla@nunc.org<\/td>\n";
+    snippets.bs3jsntablerowlink += "                    <td class=\"rowlink-skip\"><a href=\"#\">nunc.org<\/a><\/td>\n";
+    snippets.bs3jsntablerowlink += "                <\/tr>\n";
+    snippets.bs3jsntablerowlink += "                <tr>\n";
+    snippets.bs3jsntablerowlink += "                    <td><a href=\"#inputmask\">Jared<\/a><\/td>\n";
+    snippets.bs3jsntablerowlink += "                    <td>Nibh Enim Incorporated<\/td>\n";
+    snippets.bs3jsntablerowlink += "                    <td>amet@dapibusrutrumjusto.co.uk<\/td>\n";
+    snippets.bs3jsntablerowlink += "                    <td class=\"rowlink-skip\"><a href=\"#\">dapibusrutrumjusto.co.uk<\/a><\/td>\n";
+    snippets.bs3jsntablerowlink += "                <\/tr>\n";
+    snippets.bs3jsntablerowlink += "                <tr>\n";
+    snippets.bs3jsntablerowlink += "                    <td>Carson<\/td>\n";
+    snippets.bs3jsntablerowlink += "                    <td>Gravida Sagittis Associates<\/td>\n";
+    snippets.bs3jsntablerowlink += "                    <td>molestie.dapibus.ligula@Vivamus.ca<\/td>\n";
+    snippets.bs3jsntablerowlink += "                    <td class=\"rowlink-skip\"><a href=\"#\">Vivamus.ca<\/a><\/td>\n";
+    snippets.bs3jsntablerowlink += "                <\/tr>\n";
+    snippets.bs3jsntablerowlink += "\n";
+    snippets.bs3jsntablerowlink += "            <\/tbody>\n";
+    snippets.bs3jsntablerowlink += "        <\/table>\n";
+    snippets.bs3jsntablerowlink += "    <\/div>\n";
+    snippets.bs3jsntablerowlink += "\n";
+
+    // Data Entry Mask
+
+    snippets.bs3jsninputmask = '<input type="text" class="form-control" data-mask="999-99-999-9999-9" placeholder="ISBN">\n';
+
+    snippets.bs3jsnfileselect = "    <div class=\"fileinput fileinput-new input-group\" data-provides=\"fileinput\">\n";
+    snippets.bs3jsnfileselect += "        <div class=\"form-control\" data-trigger=\"fileinput\"><i class=\"glyphicon glyphicon-file fileinput-exists\"><\/i> <span class=\"fileinput-filename\"><\/span><\/div>\n";
+    snippets.bs3jsnfileselect += "        <span class=\"input-group-addon btn btn-default btn-file\"><span class=\"fileinput-new\">Select file<\/span><span class=\"fileinput-exists\">Change<\/span>\n";
+    snippets.bs3jsnfileselect += "        <input type=\"file\" name=\"...\">\n";
+    snippets.bs3jsnfileselect += "        <\/span>\n";
+    snippets.bs3jsnfileselect += "        <a href=\"#\" class=\"input-group-addon btn btn-default fileinput-exists\" data-dismiss=\"fileinput\">Remove<\/a>\n";
+    snippets.bs3jsnfileselect += "    <\/div>\n";
+    snippets.bs3jsnfileselect += "\n";
+
+    snippets.bs3jsnbtnfileselect = "    <div class=\"fileinput fileinput-new\" data-provides=\"fileinput\">\n";
+    snippets.bs3jsnbtnfileselect += "  <span class=\"btn btn-default btn-file\"><span class=\"fileinput-new\">Select file<\/span><span class=\"fileinput-exists\">Change<\/span><input type=\"file\" name=\"...\"><\/span>\n";
+    snippets.bs3jsnbtnfileselect += "  <span class=\"fileinput-filename\"><\/span>\n";
+    snippets.bs3jsnbtnfileselect += "  <a href=\"#\" class=\"close fileinput-exists\" data-dismiss=\"fileinput\" style=\"float: none\">&times;<\/a>\n";
+    snippets.bs3jsnbtnfileselect += "<\/div>\n";
+
+    snippets.bs3jsnuploadimage = "<div class=\"fileinput fileinput-new\" data-provides=\"fileinput\">\n";
+    snippets.bs3jsnuploadimage += "  <div class=\"fileinput-preview thumbnail\" data-trigger=\"fileinput\" style=\"width: 200px; height: 150px;\"><\/div>\n";
+    snippets.bs3jsnuploadimage += "  <div>\n";
+    snippets.bs3jsnuploadimage += "    <span class=\"btn btn-default btn-file\"><span class=\"fileinput-new\">Select image<\/span><span class=\"fileinput-exists\">Change<\/span><input type=\"file\" name=\"...\"><\/span>\n";
+    snippets.bs3jsnuploadimage += "    <a href=\"#\" class=\"btn btn-default fileinput-exists\" data-dismiss=\"fileinput\">Remove<\/a>\n";
+    snippets.bs3jsnuploadimage += "  <\/div>\n";
+    snippets.bs3jsnuploadimage += "<\/div>\n";
+
+    // Additional CDN
+    // Styles used in Bootstrap Beyond Basics Course - https://rawgit.com/acbarbosa1964/bootstrap-course-template/master/index.html
+    //
+
+    snippets.bs3cdnanimatecss = '<link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">\n';
+    snippets.bs3cdnanimationscss = '<link rel="stylesheet" media="screen" href="http://cdn.akoake.com/v/animations/2.1/css/animations.min.css">\n';
+    snippets.bs3cdnanimationsjs = '<script src="http://cdn.akoake.com/v/animations/2.1/js/animations.min.js"></script>\n';
+    snippets.bs3cdnappearjs = '<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.appear/0.3.3/jquery.appear.min.js"></script>\n';
+    snippets.bs3cdnbackbonejs = '<script src="http://cdn.akoake.com/v/animations/2.1/js/backbone.js"></script>\n';
+    snippets.bs3cdneasingjs = '<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>\n';
+    snippets.bs3cdnfancyboxcss = '<link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css">\n';
+    snippets.bs3cdnfancyboxjs = '<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.js"></script>\n';
+    snippets.bs3cdnfontawesomecss = '<link rel="stylesheet" media="screen" href="http://cdn.akoake.com/v/font-awesome/4.4.0/css/font-awesome.min.css">\n';
+    snippets.bs3cdnfoodcart = '<link rel="stylesheet" media="screen" href="http://cdn.akoake.com/bbb/foodcart.css">\n';
+    snippets.bs3cdnioniconscss = '<link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">\n';
+    snippets.bs3cdnisotopejs = '<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js"></script>\n';
+    snippets.bs3cdnpagecurlcss = '<link rel="stylesheet" media="screen" href="http://cdn.akoake.com/v/animations/2.1/css/animations.min.css">\n';
+    snippets.bs3cdnsmoothscrolljs = '<script src="http://cdn.akoake.com/v/animations/2.1/js/smoothscroll.min.js"></script>\n';
+    snippets.bs3cdnstylebluecss = '<link rel="stylesheet" media="screen" href="http://cdn.akoake.com/bbb/style-blue.css">\n';
+    snippets.bs3cdnstylegreencss = '<link rel="stylesheet" media="screen" href="http://cdn.akoake.com/bbb/style-green.css">\n';
+    snippets.bs3cdnstyleredcss = '<link rel="stylesheet" media="screen" href="http://cdn.akoake.com/bbb/style-red.css">\n';
+    snippets.bs3cdnstylesolidblackcss = '<link rel="stylesheet" media="screen" href="http://cdn.akoake.com/bbb/style-solid-black.css">\n';
+    snippets.bs3cdnstylesolidredcss = '<link rel="stylesheet" media="screen" href="http://cdn.akoake.com/bbb/style-solid-red.css">\n';
+    snippets.bs3cdnstyleyellowcss = '<link rel="stylesheet" media="screen" href="http://cdn.akoake.com/bbb/style-yellow.css">\n';
+    snippets.bs3cdnvegascss = '<link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.1.3/vegas.min.css">\n';
+    snippets.bs3cdnvegasjs = '<script src="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.1.3/vegas.min.js"></script>\n';
+    snippets.bs3cdnwowjs = '<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>\n';
 
     module.exports = snippets;
 });
