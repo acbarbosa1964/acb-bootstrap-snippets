@@ -685,15 +685,19 @@ Added .container-smooth a container to use the same max-width for all viewport s
 
 ### Buttons 
 Standard button with label
+
     bs3jsnbtnleft
 
 Standard button with label on the right side
+
     bs3jsnbtnright
 
 Success button with label
+
     bs3jsnbtnsuccess
 
 Danger button with label
+
     bs3jsnbtndanger
 
 ### Navmenu
