@@ -1,9 +1,9 @@
 {
     "name": "acb-bootstrap-snippets",
     "title": "ACB Bootstrap Snippets",
-    "description": "A collection of Bootstrap snippets for Brackets (Now with 547 snippets including BS3 Media Queries default sizes.)",
+    "description": "A collection of Bootstrap snippets for Brackets (Now with 601 bs3 commands including media query default sizes and Jasny Bootstrap!!!)",
     "homepage": "https://github.com/acbarbosa1964/acb-bootstrap-snippets",
-    "version": "0.0.13",
+    "version": "0.0.14",
     "author": "Antonio Carlos Barbosa <acbarbosa@gmail.com> (http://www.goodlearn.org)",
     "license": "MIT",
     "categories": "editing",
@@ -35,7 +35,8 @@
 		"document",
 		"autocomplete",
         "media",
-        "queries"
+        "queries",
+        "jasny"
     ],
     "files": [
         "main.js",
